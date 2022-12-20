@@ -4,10 +4,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneExit : MonoBehaviour
-{
-    public string sceneToLoad;
-    
-    private void OnTriggerEnter(Collider other){ //Change func
+{   
+    public string exitName;
+
+    public void ButtonMoveScene(string sceneToLoad){
+        PlayerPrefs.SetString("LastExitName", exitName);
         SceneManager.LoadScene(sceneToLoad);
     }
 }

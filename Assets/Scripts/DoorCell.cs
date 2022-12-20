@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class DoorCell : MonoBehaviour
 {
+    public UnityEvent onInteract;
     public float theDistance;
     public GameObject ActionDisplay;
     public GameObject ActionText;
@@ -23,10 +25,14 @@ public class DoorCell : MonoBehaviour
         if(theDistance <= 3){
             ActionDisplay.SetActive(true);
             ActionText.SetActive(true);
+        }else{
+            ActionDisplay.SetActive(false);
+            ActionText.SetActive(false);
         }
+
         if(Input.GetButtonDown("Action")){
             if(theDistance <= 3){
-
+                onInteract.Invoke();
             }
         }
     }
