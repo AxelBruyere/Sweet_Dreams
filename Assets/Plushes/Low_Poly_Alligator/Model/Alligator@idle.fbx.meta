@@ -1,0 +1,224 @@
+fileFormatVersion: 2
+guid: 1d9a8b0817a270944bac40bc7a6ce788
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Head_Root
+    100004: Jaw_Root
+    100006: Lower_Jaw
+    100008: Lower_Jaw_End
+    100010: Lt_Ankle
+    100012: Lt_Arm
+    100014: Lt_Elbow
+    100016: Lt_Foot
+    100018: Lt_Forearm
+    100020: Lt_Hand
+    100022: Lt_Knee
+    100024: Lt_Leg
+    100026: Lt_Toe
+    100028: Lt_Wrist
+    100030: Mid_Spine
+    100032: Root
+    100034: Rt_Ankle
+    100036: Rt_Arm
+    100038: Rt_Elbow
+    100040: Rt_Foot
+    100042: Rt_Forearm
+    100044: Rt_Hand
+    100046: Rt_Knee
+    100048: Rt_Leg
+    100050: Rt_Toe
+    100052: Rt_Wrist
+    100054: Tail_01
+    100056: Tail_02
+    100058: Tail_03
+    100060: Tail_End
+    100062: Tail_Root
+    100064: Upper_Jaw
+    100066: Upper_Jaw_End
+    400000: //RootNode
+    400002: Head_Root
+    400004: Jaw_Root
+    400006: Lower_Jaw
+    400008: Lower_Jaw_End
+    400010: Lt_Ankle
+    400012: Lt_Arm
+    400014: Lt_Elbow
+    400016: Lt_Foot
+    400018: Lt_Forearm
+    400020: Lt_Hand
+    400022: Lt_Knee
+    400024: Lt_Leg
+    400026: Lt_Toe
+    400028: Lt_Wrist
+    400030: Mid_Spine
+    400032: Root
+    400034: Rt_Ankle
+    400036: Rt_Arm
+    400038: Rt_Elbow
+    400040: Rt_Foot
+    400042: Rt_Forearm
+    400044: Rt_Hand
+    400046: Rt_Knee
+    400048: Rt_Leg
+    400050: Rt_Toe
+    400052: Rt_Wrist
+    400054: Tail_01
+    400056: Tail_02
+    400058: Tail_03
+    400060: Tail_End
+    400062: Tail_Root
+    400064: Upper_Jaw
+    400066: Upper_Jaw_End
+    7400000: idle
+    9500000: //RootNode
+    11100000: //RootNode
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 0
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 2
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: idle
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 300
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/Lt_Leg
+        weight: 1
+      - path: Root/Lt_Leg/Lt_Knee
+        weight: 1
+      - path: Root/Lt_Leg/Lt_Knee/Lt_Ankle
+        weight: 1
+      - path: Root/Lt_Leg/Lt_Knee/Lt_Ankle/Lt_Foot
+        weight: 1
+      - path: Root/Lt_Leg/Lt_Knee/Lt_Ankle/Lt_Foot/Lt_Toe
+        weight: 1
+      - path: Root/Mid_Spine
+        weight: 1
+      - path: Root/Mid_Spine/Head_Root
+        weight: 1
+      - path: Root/Mid_Spine/Head_Root/Jaw_Root
+        weight: 1
+      - path: Root/Mid_Spine/Head_Root/Jaw_Root/Lower_Jaw
+        weight: 1
+      - path: Root/Mid_Spine/Head_Root/Jaw_Root/Lower_Jaw/Lower_Jaw_End
+        weight: 1
+      - path: Root/Mid_Spine/Head_Root/Jaw_Root/Upper_Jaw
+        weight: 1
+      - path: Root/Mid_Spine/Head_Root/Jaw_Root/Upper_Jaw/Upper_Jaw_End
+        weight: 1
+      - path: Root/Mid_Spine/Lt_Arm
+        weight: 1
+      - path: Root/Mid_Spine/Lt_Arm/Lt_Elbow
+        weight: 1
+      - path: Root/Mid_Spine/Lt_Arm/Lt_Elbow/Lt_Forearm
+        weight: 1
+      - path: Root/Mid_Spine/Lt_Arm/Lt_Elbow/Lt_Forearm/Lt_Wrist
+        weight: 1
+      - path: Root/Mid_Spine/Lt_Arm/Lt_Elbow/Lt_Forearm/Lt_Wrist/Lt_Hand
+        weight: 1
+      - path: Root/Mid_Spine/Rt_Arm
+        weight: 1
+      - path: Root/Mid_Spine/Rt_Arm/Rt_Elbow
+        weight: 1
+      - path: Root/Mid_Spine/Rt_Arm/Rt_Elbow/Rt_Forearm
+        weight: 1
+      - path: Root/Mid_Spine/Rt_Arm/Rt_Elbow/Rt_Forearm/Rt_Wrist
+        weight: 1
+      - path: Root/Mid_Spine/Rt_Arm/Rt_Elbow/Rt_Forearm/Rt_Wrist/Rt_Hand
+        weight: 1
+      - path: Root/Rt_Leg
+        weight: 1
+      - path: Root/Rt_Leg/Rt_Knee
+        weight: 1
+      - path: Root/Rt_Leg/Rt_Knee/Rt_Ankle
+        weight: 1
+      - path: Root/Rt_Leg/Rt_Knee/Rt_Ankle/Rt_Foot
+        weight: 1
+      - path: Root/Rt_Leg/Rt_Knee/Rt_Ankle/Rt_Foot/Rt_Toe
+        weight: 1
+      - path: Root/Tail_Root
+        weight: 1
+      - path: Root/Tail_Root/Tail_01
+        weight: 1
+      - path: Root/Tail_Root/Tail_01/Tail_02
+        weight: 1
+      - path: Root/Tail_Root/Tail_01/Tail_02/Tail_03
+        weight: 1
+      - path: Root/Tail_Root/Tail_01/Tail_02/Tail_03/Tail_End
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 0
+  userData: 
