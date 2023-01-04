@@ -1760,6 +1760,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 433206676}
     m_Modifications:
+    - target: {fileID: -7292352801860920061, guid: 1ecf71ad38ed1504a9ec097d35671bf6, type: 3}
+      propertyPath: theDoor
+      value: 
+      objectReference: {fileID: 1627741569}
+    - target: {fileID: -7292352801860920061, guid: 1ecf71ad38ed1504a9ec097d35671bf6, type: 3}
+      propertyPath: ActionText
+      value: 
+      objectReference: {fileID: 82834276}
+    - target: {fileID: -7292352801860920061, guid: 1ecf71ad38ed1504a9ec097d35671bf6, type: 3}
+      propertyPath: ActionDisplay
+      value: 
+      objectReference: {fileID: 1412090233}
     - target: {fileID: 2825822918832863865, guid: 1ecf71ad38ed1504a9ec097d35671bf6, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -3364,6 +3376,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 433206676}
     m_Modifications:
+    - target: {fileID: -7292352801860920061, guid: 1ecf71ad38ed1504a9ec097d35671bf6, type: 3}
+      propertyPath: theDoor
+      value: 
+      objectReference: {fileID: 1503239979}
+    - target: {fileID: -7292352801860920061, guid: 1ecf71ad38ed1504a9ec097d35671bf6, type: 3}
+      propertyPath: ActionText
+      value: 
+      objectReference: {fileID: 82834276}
+    - target: {fileID: -7292352801860920061, guid: 1ecf71ad38ed1504a9ec097d35671bf6, type: 3}
+      propertyPath: ActionDisplay
+      value: 
+      objectReference: {fileID: 1412090233}
     - target: {fileID: 2825822918832863865, guid: 1ecf71ad38ed1504a9ec097d35671bf6, type: 3}
       propertyPath: m_RootOrder
       value: 8
