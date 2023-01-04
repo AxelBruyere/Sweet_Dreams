@@ -4,68 +4,70 @@ using UnityEngine;
 
 public class PlushesControl : MonoBehaviour
 {
-    public Transform player;
-    public Transform playerCam;
-    public float throwForce = 10;
+    [Header("Pickup Settings")]
+    [SerializeField] Transform holdArea;
+    private GameObject heldObj;
+    private Rigidbody heldObjRB;
 
-    private bool hasPlayer = false;
-    private bool beingCarried = false;
-    private bool touched = false;
+    [Header("Physics PArameters")]
+    [SerializeField] private float pickupRange = 5.0f;
+    [SerializeField] private float pickupForce = 150.0f;
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        // check distance entre obj et joueur
-        float dist = Vector3.Distance(gameObject.transform.position, player.position);
-
-        // si - ou = 2.5 unités de distance = on peut ramasser
-        if (dist <= 1.9f)
+        if (Input.GetMouseButtonDown(0))
         {
-            hasPlayer = true;
-        }
-        else
-        {
-            hasPlayer = false;
-        }
-        //si on peut ramasser et qu'on appuye sur T = on porte l'objet
-        if (hasPlayer==true && Input.GetKey(KeyCode.T))
-        {
-            GetComponent<Rigidbody>().isKinematic = true;
-            transform.parent = playerCam;
-            beingCarried = true;
+            if(heldObj == null)
+            {
+                RaycastHit hit;
+                if(Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, pickupRange))
+                {
+                     PickupObject(hit.transform.gameObject);
+                }
+            }
+            else
+            {
+                DropObject();
+            }
         } 
-        //si on porte l'objet
-        if (beingCarried)
+        if (heldObj != null)
         {
-            if (touched)
-            {
-                GetComponent<Rigidbody>().isKinematic = false;
-                transform.parent = null;
-                beingCarried = false;
-                touched = false;
-            }
-            // clic gauche = on jette l'objet
-            if (Input.GetMouseButtonDown(0))
-            {
-                GetComponent<Rigidbody>().isKinematic = false;
-                transform.parent = null;
-                beingCarried = false;
-                GetComponent<Rigidbody>().AddForce(playerCam.forward * throwForce);
-            }
-            // clic droit = on pose l'objet
-            else if (Input.GetMouseButtonDown(1))
-            {
-                GetComponent<Rigidbody>().isKinematic = false;
-                transform.parent = null;
-                beingCarried = false;
-            }
-        }   
-    }
-    void OnTriggerEnter()
-    {
-        if (beingCarried)
-        {
-            touched = true;
+            MoveObject();
         }
+    }
+
+    void MoveObject()
+    {
+        if(Vector3.Distance(heldObj.transform.position, holdArea.position) > 0.1f)
+        {
+            Vector3 moveDirection = (holdArea.position - heldObj.transform.position);
+            heldObjRB.AddForce(moveDirection * pickupForce);
+        }
+    }
+
+    void PickupObject(GameObject pickObj)
+    {
+        if(pickObj.GetComponent<Rigidbody>())
+        {
+            heldObjRB = pickObj.GetComponent<Rigidbody>();
+            heldObjRB.useGravity = false;
+            heldObjRB.drag = 10;
+            heldObjRB.constraints = RigidbodyConstraints.FreezeRotation;
+
+            heldObjRB.transform.parent = holdArea;
+            heldObj = pickObj;
+        }
+    }
+
+    void DropObject()
+    {
+
+        heldObjRB.useGravity = true;
+        heldObjRB.drag = 1;
+        heldObjRB.constraints = RigidbodyConstraints.None;
+
+        heldObj.transform.parent = null;
+        heldObj = null;
+
     }
 }
