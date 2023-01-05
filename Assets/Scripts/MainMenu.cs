@@ -5,8 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    SceneExit exit;
     public void PlayGame(){
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        exit = gameObject.GetComponent<SceneExit>();
+        exit.ButonMoveScene("ChildRoom");
     }
 
     public void QuitGame(){

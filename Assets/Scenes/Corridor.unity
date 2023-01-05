@@ -1083,6 +1083,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1412090233}
     - target: {fileID: 256209993237265579, guid: e16fb40b1e07e3742b7467c0c5ae5e28, type: 3}
+      propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ButonMoveScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 256209993237265579, guid: e16fb40b1e07e3742b7467c0c5ae5e28, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: Bathroom
       objectReference: {fileID: 0}
@@ -2624,9 +2628,9 @@ MonoBehaviour:
   onInteract:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1503239981}
+      - m_Target: {fileID: 1503239983}
         m_TargetAssemblyTypeName: SceneExit, Assembly-CSharp
-        m_MethodName: ButtonMoveScene
+        m_MethodName: ButonMoveScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2653,6 +2657,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   exitName: Corridor
+--- !u!114 &1503239983 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -4064160247954212553, guid: 1ecf71ad38ed1504a9ec097d35671bf6, type: 3}
+  m_PrefabInstance: {fileID: 2070294271}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503239979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15012c8d272f22b4bbfaf78907c36a5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1560525750 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2825822918832863865, guid: 1ecf71ad38ed1504a9ec097d35671bf6, type: 3}
@@ -2834,9 +2849,9 @@ MonoBehaviour:
   onInteract:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1627741570}
+      - m_Target: {fileID: 1627741573}
         m_TargetAssemblyTypeName: SceneExit, Assembly-CSharp
-        m_MethodName: ButtonMoveScene
+        m_MethodName: ButonMoveScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2850,6 +2865,17 @@ MonoBehaviour:
   ActionDisplay: {fileID: 1412090233}
   ActionText: {fileID: 82834276}
   theDoor: {fileID: 1627741569}
+--- !u!114 &1627741573 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -4064160247954212553, guid: 1ecf71ad38ed1504a9ec097d35671bf6, type: 3}
+  m_PrefabInstance: {fileID: 1030823542}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1627741569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15012c8d272f22b4bbfaf78907c36a5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1638048568
 GameObject:
   m_ObjectHideFlags: 0
@@ -3686,5 +3712,9 @@ PrefabInstance:
       propertyPath: ActionDisplay
       value: 
       objectReference: {fileID: 1412090233}
+    - target: {fileID: 7764721311691827497, guid: 7efed3281286e9d4d88775aa9816869c, type: 3}
+      propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ButonMoveScene
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7efed3281286e9d4d88775aa9816869c, type: 3}
