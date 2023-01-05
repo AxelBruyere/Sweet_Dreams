@@ -7,7 +7,7 @@ public class SceneExit : MonoBehaviour
 {   
     public string exitName;
 
-    public void ButtonMoveScene(string sceneToLoad){
+    public void ButonMoveScene(string sceneToLoad){
         PlayerPrefs.SetString("LastExitName", exitName);
         SceneManager.LoadScene(sceneToLoad);
     }

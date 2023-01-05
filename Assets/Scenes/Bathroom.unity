@@ -1783,6 +1783,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1807790834}
     - target: {fileID: 7764721311691827497, guid: 7efed3281286e9d4d88775aa9816869c, type: 3}
+      propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ButonMoveScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 7764721311691827497, guid: 7efed3281286e9d4d88775aa9816869c, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: Corridor
       objectReference: {fileID: 0}

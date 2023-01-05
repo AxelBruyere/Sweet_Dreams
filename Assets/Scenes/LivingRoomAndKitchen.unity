@@ -4225,6 +4225,10 @@ PrefabInstance:
       propertyPath: ActionDisplay
       value: 
       objectReference: {fileID: 2105758380}
+    - target: {fileID: 256209993237265579, guid: e16fb40b1e07e3742b7467c0c5ae5e28, type: 3}
+      propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ButonMoveScene
+      objectReference: {fileID: 0}
     - target: {fileID: 5383054127341791349, guid: e16fb40b1e07e3742b7467c0c5ae5e28, type: 3}
       propertyPath: m_RootOrder
       value: 0

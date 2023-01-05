@@ -1968,7 +1968,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7292352801860920061, guid: 1ecf71ad38ed1504a9ec097d35671bf6, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ButtonMoveScene
+      value: ButonMoveScene
       objectReference: {fileID: 0}
     - target: {fileID: -7292352801860920061, guid: 1ecf71ad38ed1504a9ec097d35671bf6, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
