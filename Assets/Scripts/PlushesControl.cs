@@ -22,7 +22,6 @@ public class PlushesControl : MonoBehaviour
                 RaycastHit hit;
                 if(Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, pickupRange))
                 {
-                    Debug.Log("Click");
                     PickupObject(hit.transform.gameObject);
                 }
             }

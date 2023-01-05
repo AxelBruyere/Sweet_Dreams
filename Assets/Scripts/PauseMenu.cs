@@ -54,6 +54,8 @@ public class PauseMenu : MonoBehaviour
 
     //function called when Menu button is pressed
     public void LoadMenu(){
+        GameObject toDestroy = GameObject.FindWithTag("Player");
+        Destroy(toDestroy);
         //reactive the time flow
         Time.timeScale = 1f;
         //load of the first scene in the order - the menu
