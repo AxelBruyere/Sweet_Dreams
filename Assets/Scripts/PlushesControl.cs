@@ -9,10 +9,10 @@ public class PlushesControl : MonoBehaviour
     private GameObject heldObj;
     private Rigidbody heldObjRB;
 
-    [Header("Physics PArameters")]
+    [Header("Physics Parameters")]
     [SerializeField] private float pickupRange = 5.0f;
     [SerializeField] private float pickupForce = 150.0f;
-
+    
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -22,7 +22,8 @@ public class PlushesControl : MonoBehaviour
                 RaycastHit hit;
                 if(Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, pickupRange))
                 {
-                     PickupObject(hit.transform.gameObject);
+                    Debug.Log("Click");
+                    PickupObject(hit.transform.gameObject);
                 }
             }
             else
