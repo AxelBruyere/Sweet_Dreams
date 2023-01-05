@@ -5,31 +5,38 @@ using UnityEngine.UI;
 using UnityEngine.Events;
 
 public class DoorCell : MonoBehaviour
-{
+{  
+    //unity event
     public UnityEvent onInteract;
+    //distance player - targer
     public float theDistance;
+    //show door text and button for door that are interactable
     public GameObject ActionDisplay;
     public GameObject ActionText;
     public GameObject theDoor;
+    //door noise
     //public AudioSource CreakSound;
-
-
 
     // Update is called once per frame
     void Update()
     {
+        //update the discance from the player to the target every interaction
         theDistance = PlayerCasting.DistanceFromTarget;
     }
 
+    //function if the mouse is pointing the door
     void OnMouseOver(){
         if(theDistance <= 3){
+            //show text and button
             ActionDisplay.SetActive(true);
             ActionText.SetActive(true);
         }else{
+            //hide text and button
             ActionDisplay.SetActive(false);
             ActionText.SetActive(false);
         }
 
+        //get the action key
         if(Input.GetButtonDown("Action")){
             if(theDistance <= 3){
                 onInteract.Invoke();
@@ -37,7 +44,9 @@ public class DoorCell : MonoBehaviour
         }
     }
     
+    //function if the mouse is not pointing anymore
     void OnMouseExit(){
+        //hide text and button
         ActionDisplay.SetActive(false);
         ActionText.SetActive(false);
     }

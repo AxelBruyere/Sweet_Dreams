@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
+    //Criation of a player instance to keep it characteristics between scenes
     public static PlayerScript instance;
-    // Start is called before the first frame update
+    
     void Start()
     {
         if(instance != null){
