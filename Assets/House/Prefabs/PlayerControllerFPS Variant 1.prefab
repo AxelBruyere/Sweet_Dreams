@@ -204,6 +204,10 @@ PrefabInstance:
       propertyPath: m_InnerSpotAngle
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 3818356861968510881, guid: 573ac53c334415945bf239de2c2f0511, type: 3}
+      propertyPath: mouseSensitivity
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 4457946947931158276, guid: 573ac53c334415945bf239de2c2f0511, type: 3}
       propertyPath: m_Intensity
       value: 100

@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
 
     public CharacterController controller;
 
+    public static Vector3 speedtosend;
     public float speed = 12f;
     public float gravity = -10f;
     public float jumpHeight = 2f;
@@ -74,7 +75,8 @@ public class PlayerMovement : MonoBehaviour
         }
 
         Vector3 move = transform.right * x + transform.forward * z;
-
+        
+        speedtosend = move * speed * Time.deltaTime;
         controller.Move(move * speed * Time.deltaTime);
 
         if(jumpPressed && isGrounded)
