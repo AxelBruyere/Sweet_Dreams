@@ -156,7 +156,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2520778222865251831, guid: 7efed3281286e9d4d88775aa9816869c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.07
+      value: 3.42
       objectReference: {fileID: 0}
     - target: {fileID: 2520778222865251831, guid: 7efed3281286e9d4d88775aa9816869c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1612,6 +1612,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1204612999599335210, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4605954678695598052, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4996075005658483848, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4996075005658483849, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
       propertyPath: m_RootOrder
       value: 21
@@ -1659,6 +1671,26 @@ PrefabInstance:
     - target: {fileID: 4996075005658483855, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
       propertyPath: m_Name
       value: PlayerControllerFPS Variant 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4996075005794178665, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4996075005794178665, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4996075005794178665, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4996075005794178667, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8378180890567586199, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
