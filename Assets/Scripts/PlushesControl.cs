@@ -28,6 +28,7 @@ public class PlushesControl : MonoBehaviour
             else
             {
                 DropObject();
+                
             }
         } 
         if (heldObj != null)
