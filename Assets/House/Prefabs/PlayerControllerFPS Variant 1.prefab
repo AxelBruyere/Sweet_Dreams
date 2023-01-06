@@ -30,26 +30,6 @@ Transform:
   m_Father: {fileID: 4996075005794178665}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1204612999599335210
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4996075005658483855}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd8969e49f50aff4daff394705770b11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Sensitivity: 2
-  Vert: 0
-  Hor: 0
-  Speed: 5
-  Movement: {x: 0, y: 0, z: 0}
-  VertTemp: 0
-  groundCheck: {fileID: 4996075005425480226}
-  groundDistance: 0.6
 --- !u!114 &4605954678695598052
 MonoBehaviour:
   m_ObjectHideFlags: 0
