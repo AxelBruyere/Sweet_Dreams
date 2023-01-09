@@ -364,6 +364,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerControllerFPS Variant 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4996075005658483855, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6748267551247500235, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
       propertyPath: m_Range
       value: 20
@@ -625,6 +629,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bed_Set
       objectReference: {fileID: 0}
+    - target: {fileID: 1774811779915186, guid: eef8306c54f201a4e8cd536d25207e32, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4008794017647016, guid: eef8306c54f201a4e8cd536d25207e32, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -778,6 +786,10 @@ PrefabInstance:
     - target: {fileID: 1163868327236364, guid: 466b178cd356e914db5d739249226df9, type: 3}
       propertyPath: m_Name
       value: Almirah_low
+      objectReference: {fileID: 0}
+    - target: {fileID: 1163868327236364, guid: 466b178cd356e914db5d739249226df9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4112414398726650, guid: 466b178cd356e914db5d739249226df9, type: 3}
       propertyPath: m_RootOrder
@@ -1282,6 +1294,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box_3
       objectReference: {fileID: 0}
+    - target: {fileID: 4673612198529529648, guid: 6ea21a7ad97f8ab41bcc4f77f90bbf1f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ea21a7ad97f8ab41bcc4f77f90bbf1f, type: 3}
 --- !u!1001 &1243544534
@@ -1294,6 +1310,10 @@ PrefabInstance:
     - target: {fileID: 1636173417214098, guid: f3be12c52c2feee4d989b3f26c8c98ff, type: 3}
       propertyPath: m_Name
       value: Table
+      objectReference: {fileID: 0}
+    - target: {fileID: 1636173417214098, guid: f3be12c52c2feee4d989b3f26c8c98ff, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4225142536492366, guid: f3be12c52c2feee4d989b3f26c8c98ff, type: 3}
       propertyPath: m_RootOrder
@@ -1451,6 +1471,10 @@ PrefabInstance:
     - target: {fileID: 6769121460206094711, guid: ff6a3c2662efde04d9b3d0dd5a82be11, type: 3}
       propertyPath: m_Name
       value: Chess Board
+      objectReference: {fileID: 0}
+    - target: {fileID: 6769121460206094711, guid: ff6a3c2662efde04d9b3d0dd5a82be11, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6769121460534152366, guid: ff6a3c2662efde04d9b3d0dd5a82be11, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1804,6 +1828,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box_1
       objectReference: {fileID: 0}
+    - target: {fileID: 1933297280396201637, guid: dd3392c11f58ebd459f866d47de6ac0f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1933297280396201638, guid: dd3392c11f58ebd459f866d47de6ac0f, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -2024,6 +2052,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Concrete_Edge_Decal
       objectReference: {fileID: 0}
+    - target: {fileID: 1771304615123796395, guid: 4751770e0dc8c1149aa554360ae6087b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4751770e0dc8c1149aa554360ae6087b, type: 3}
 --- !u!1001 &1838997645
@@ -2105,6 +2137,10 @@ PrefabInstance:
     - target: {fileID: 1933297280396201637, guid: dd3392c11f58ebd459f866d47de6ac0f, type: 3}
       propertyPath: m_Name
       value: Box_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1933297280396201637, guid: dd3392c11f58ebd459f866d47de6ac0f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1933297280396201638, guid: dd3392c11f58ebd459f866d47de6ac0f, type: 3}
       propertyPath: m_RootOrder
@@ -2232,6 +2268,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: 4852338949480097149, guid: cfbbe4f6d391238438bef7d632fecca1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4852338949922302094, guid: cfbbe4f6d391238438bef7d632fecca1, type: 3}
       propertyPath: m_LocalPosition.z
       value: -5.08
@@ -2248,6 +2288,10 @@ PrefabInstance:
     - target: {fileID: 8940593070200253252, guid: ba81329604a9dc4439a7d704a4a33b68, type: 3}
       propertyPath: m_Name
       value: WindowTop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8940593070200253252, guid: ba81329604a9dc4439a7d704a4a33b68, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8940593070200253256, guid: ba81329604a9dc4439a7d704a4a33b68, type: 3}
       propertyPath: m_RootOrder
