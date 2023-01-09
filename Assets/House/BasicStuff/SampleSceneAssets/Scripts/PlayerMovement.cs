@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController controller;
 
     public static Vector3 speedtosend;
+    public static Vector3 velocitytosend;
     public float speed = 12f;
     public float gravity = -10f;
     public float jumpHeight = 2f;
@@ -86,6 +87,7 @@ public class PlayerMovement : MonoBehaviour
 
         velocity.y += gravity * Time.deltaTime;
 
+        velocitytosend = velocity;
         controller.Move(velocity * Time.deltaTime);
     }
 }

@@ -49,7 +49,7 @@ public class LookWithMouse : MonoBehaviour
         sendX = mouseX;
         sendY = mouseY;
         xRotation -= mouseY;
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+        xRotation = Mathf.Clamp(xRotation, -69f, 69f);
 
         transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
         //Debug.Log(Vector3.up * mouseX);

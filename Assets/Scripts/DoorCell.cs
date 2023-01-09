@@ -26,12 +26,14 @@ public class DoorCell : MonoBehaviour
 
     //function if the mouse is pointing the door
     void OnMouseOver(){
+        
         if(theDistance <= 3){
             //show text and button
             ActionDisplay.SetActive(true);
             ActionText.SetActive(true);
         }else{
             //hide text and button
+            //Debug.Log("exitdistance");
             ActionDisplay.SetActive(false);
             ActionText.SetActive(false);
         }
@@ -46,6 +48,7 @@ public class DoorCell : MonoBehaviour
     
     //function if the mouse is not pointing anymore
     void OnMouseExit(){
+        //Debug.Log("exit mouse");
         //hide text and button
         ActionDisplay.SetActive(false);
         ActionText.SetActive(false);
