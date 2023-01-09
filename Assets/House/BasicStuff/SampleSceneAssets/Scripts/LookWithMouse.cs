@@ -52,7 +52,7 @@ public class LookWithMouse : MonoBehaviour
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
         transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-        
+        //Debug.Log(Vector3.up * mouseX);
         playerBody.Rotate(Vector3.up * mouseX);
     }
 }
