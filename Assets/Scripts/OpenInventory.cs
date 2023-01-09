@@ -26,7 +26,6 @@ public class OpenInventory : MonoBehaviour
     }
     //fonction to resume the game
     public void InventoryOpen(){
-        Debug.Log("bbb");
         //show the pause menu
         InventoryUI.SetActive(true);
         //stop the time flow

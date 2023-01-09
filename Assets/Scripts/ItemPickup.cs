@@ -12,7 +12,7 @@ public class ItemPickup : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void OnMouseDowon()
+    private void OnMouseDown()
     {
         Pickup();
     }
