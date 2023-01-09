@@ -2439,7 +2439,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4996075005658483849, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.3810761
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 4996075005658483849, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2476,6 +2476,10 @@ PrefabInstance:
     - target: {fileID: 4996075005658483855, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
       propertyPath: m_Name
       value: PlayerControllerFPS Variant 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8962887466887199422, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
