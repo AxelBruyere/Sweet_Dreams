@@ -18,8 +18,8 @@ public class OpenInventory : MonoBehaviour
             if(!InventoryIsOpen)
             {
                 InventoryOpen();
-
-            }else{
+            }
+            else{
                 InventoryClose();
             }
         }
@@ -36,6 +36,8 @@ public class OpenInventory : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         //show the cursor
         Cursor.visible = true;
+        InventoryManager.Instance.ListItems();
+
     }
 
     //fonction to resume the game

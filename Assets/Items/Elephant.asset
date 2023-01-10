@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 3
   itemName: Elephant
-  icon: {fileID: 21300000, guid: 41a4be5872c8e41429ef80a77d5fb648, type: 3}
+  itemIcon: {fileID: 21300000, guid: 41a4be5872c8e41429ef80a77d5fb648, type: 3}
