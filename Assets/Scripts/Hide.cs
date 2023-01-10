@@ -16,13 +16,18 @@ public class Hide : MonoBehaviour
     public float theDistance;
     //Boolean containing the hidding state
     public bool isHiding = false;
+    public bool justHide = false;
+    public static bool isHidingWardrobe = false;
     //private bool guiShow = false;
     //show door text and button for door that are interactable
     public GameObject hideDisplay;
     public GameObject hideText;
+    public GameObject leaveDisplay;
+    public GameObject leaveText;
     public GameObject theHidingPlace;
     public bool isFlashLightOn;
     public GameObject flashlight;
+    public GameObject character;
 
     void Start()
     {
@@ -35,23 +40,32 @@ public class Hide : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //get the active/inactive state of the flashlight
+        isFlashLightOn = flashlight.activeInHierarchy;
+        //update the discance from the player to the target every interaction
+        theDistance = PlayerCasting.DistanceFromTarget;
         //TODO - dont working
         if(isHiding){
-            if(Input.GetButtonDown("E")){
+            if(Input.GetButtonDown("Action")){
                 //Enable player
-                GameObject.Find("PlayerControllerFPS Variant 1").SetActive(true);                
-                
+                //GameObject.Find("PlayerControllerFPS Variant 1").transform.GetChild(0).SetActive(true);                
+                character.transform.GetChild(0).gameObject.SetActive(true);
+
                 //Switch cameras
                 mainCamera.enabled = true;
                 hidingCamera.enabled = false;
 
                 isHiding = false;
+                justHide = false;
+                isHidingWardrobe = false;
+
+                leaveDisplay.SetActive(false);
+                leaveText.SetActive(false);
             }
+        }else{
+            isHiding = justHide;
+            Wait();
         }
-        //get the active/inactive state of the flashlight
-        isFlashLightOn = flashlight.activeInHierarchy;
-        //update the discance from the player to the target every interaction
-        theDistance = PlayerCasting.DistanceFromTarget;
     }
 
     //function if the mouse is pointing the door
@@ -66,8 +80,9 @@ public class Hide : MonoBehaviour
                 //get the action key
                 if(Input.GetButtonDown("Action")){
                     //Disable player
-                    GameObject.Find("PlayerControllerFPS Variant 1").SetActive(false);
-                    
+                    //GameObject.Find("PlayerControllerFPS Variant 1").transform.GetChild(0).SetActive(false);
+                    character.transform.GetChild(0).gameObject.SetActive(false);
+
                     //Switch cameras
                     mainCamera.enabled = false;
                     hidingCamera.enabled = true;
@@ -75,13 +90,15 @@ public class Hide : MonoBehaviour
                     //flashlight.SetActive(false);
                     //isFlashLightOn = false;
 
-                    isHiding = true;
+                    justHide = true;
+                    isHidingWardrobe = true;
+    
                     hideDisplay.SetActive(false);
                     hideText.SetActive(false);
+                    leaveDisplay.SetActive(true);
+                    leaveText.SetActive(true);
                     
                     //onInteract.Invoke();
-
-                    Debug.Log("Chuicaché");
                 }
             }else{
                 //hide text and button
@@ -96,5 +113,10 @@ public class Hide : MonoBehaviour
         //hide text and button
         hideDisplay.SetActive(false);
         hideText.SetActive(false);
+    }
+
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(0.5f);
     }
 }
