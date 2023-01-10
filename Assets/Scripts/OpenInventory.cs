@@ -10,6 +10,12 @@ public class OpenInventory : MonoBehaviour
     //game object that indicate the open inventory in unity
     public GameObject InventoryUI;
 
+    void Start()
+    {
+        //At the beginning inventory is closed
+        InventoryUI.SetActive(false);
+    }
+
     void Update()
     {
         
