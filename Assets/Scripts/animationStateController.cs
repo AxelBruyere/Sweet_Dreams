@@ -6,12 +6,13 @@ using UnityEngine.InputSystem;
 public class animationStateController : MonoBehaviour
 {
     public Vector3 movement;
+    public Vector3 velocity;
     public Vector2 turn;
     public float mouseSensitivity = 200;
     float xRotation = 0f;
     //declare reference variables
     PlayerKeyBindings keyBindings;
-    CharacterController characterController;
+    //CharacterController characterController;
     Animator animator;
     public Transform bone;
     
@@ -26,7 +27,7 @@ public class animationStateController : MonoBehaviour
     {
         //set reference variable
         keyBindings = new PlayerKeyBindings();
-        characterController = GetComponent<CharacterController>();
+        //characterController = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
         
         keyBindings.CharacterControls.Move.started += onMovementInput;
@@ -34,24 +35,17 @@ public class animationStateController : MonoBehaviour
         keyBindings.CharacterControls.Move.performed += onMovementInput;
 
         bone = GetComponent<Transform>().Find("mixamorig6:Hips/mixamorig6:Spine/mixamorig6:Spine1/mixamorig6:Spine2/mixamorig6:Neck");
-        /*if(bone != null){
-            Debug.Log("deu bom");
-        }*/
     }
 
     void handleRotation()
     {
-        //turn.x += Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        //turn.y += Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+       
         turn.x = LookWithMouse.sendX;
         turn.y = LookWithMouse.sendY;
         xRotation -= turn.y;
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
-        //bone.localRotation = Quaternion.Euler(xRotation,0f,0f);
-        //bone.localEulerAngles = new Vector3 (130, 0, 0);
+        xRotation = Mathf.Clamp(xRotation, -69f, 69f);
         transform.localRotation = Quaternion.Euler(0f,turn.x,0f);
-        //Debug.Log(Vector3.up * turn.x);
-        //transform.Rotate(Vector3.up * turn.x);
+        
     }
     
     void onMovementInput(InputAction.CallbackContext context)
@@ -77,8 +71,11 @@ public class animationStateController : MonoBehaviour
         handleRotation();
         handleAnimation();
         movement = PlayerMovement.speedtosend;
-        characterController.Move(movement);
-
+        //characterController.Move(movement);
+        velocity = PlayerMovement.velocitytosend;
+        //characterController.Move(velocity * Time.deltaTime);
+        Vector3 pos = GameObject.Find("PlayerControllerFPS Variant 1").transform.position;
+        GameObject.Find("PlayerControllerFPS Variant 1").transform.GetChild(0).position = new Vector3(pos.x,GameObject.Find("PlayerControllerFPS Variant 1").transform.GetChild(0).position.y,pos.z);
     }
 
     void LateUpdate()

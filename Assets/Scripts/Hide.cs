@@ -32,6 +32,7 @@ public class Hide : MonoBehaviour
 
     //function if the mouse is pointing the door
     void OnMouseOver(){
+        Debug.Log("Over " + gameObject.name);
         if (!isHidden){
             if(theDistance <= 3){
                 //show text and button
