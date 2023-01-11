@@ -9,7 +9,32 @@ public class ItemPickup : MonoBehaviour
     void Pickup()
     {
         InventoryManager.Instance.Add(Item);
-        Destroy(gameObject);
+        if (Item.itemName == "Monkey")
+        {
+            InventoryManager.haveMonkey = true;
+        }
+
+        if (Item.itemName == "Rabbit")
+        {
+            InventoryManager.haveRabbit = true;
+        }
+
+        if (Item.itemName == "Elephant")
+        {
+            InventoryManager.haveElephant = true;
+        }
+
+        if (Item.itemName == "Dinosaur")
+        {
+            InventoryManager.haveDinosaur = true;
+        }
+
+        if (Item.itemName == "Alligator")
+        {
+            InventoryManager.haveAlligator = true;
+        }
+        
+        gameObject.SetActive(false);
     }
 
     private void OnMouseDown()

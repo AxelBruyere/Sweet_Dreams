@@ -532,7 +532,7 @@ PrefabInstance:
     - target: {fileID: 6177895242079901141, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
       propertyPath: InventoryUI
       value: 
-      objectReference: {fileID: 729328581}
+      objectReference: {fileID: 841424183}
     - target: {fileID: 8378180890567586199, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
       propertyPath: ActionText
       value: 
@@ -1786,11 +1786,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5110320689825423373, guid: 09d30b18e8342ad41948c0101f076652, type: 3}
   m_PrefabInstance: {fileID: 729328579}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &729328581 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5110320687935683232, guid: 09d30b18e8342ad41948c0101f076652, type: 3}
-  m_PrefabInstance: {fileID: 729328579}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &754916479
 GameObject:
   m_ObjectHideFlags: 0
@@ -2045,6 +2040,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 462d4dcb446132740a4898345d102aa5, type: 3}
+--- !u!1 &841424183 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5110320689121540325, guid: 09d30b18e8342ad41948c0101f076652, type: 3}
+  m_PrefabInstance: {fileID: 729328579}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &916233774
 GameObject:
   m_ObjectHideFlags: 0

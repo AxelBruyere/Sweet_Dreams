@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Alligator
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b998bcbf663e3644c998ed4c059d8b17, type: 3}
+      propertyPath: m_TagString
+      value: Plush
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b998bcbf663e3644c998ed4c059d8b17, type: 3}
       propertyPath: m_RootOrder
       value: 0

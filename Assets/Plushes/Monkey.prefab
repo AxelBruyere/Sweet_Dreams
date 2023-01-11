@@ -9,7 +9,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1502818402513928, guid: d323fc18d7f7cbb4d971d8250d723165, type: 3}
       propertyPath: m_Name
-      value: MONKEY
+      value: Monkey
+      objectReference: {fileID: 0}
+    - target: {fileID: 1502818402513928, guid: d323fc18d7f7cbb4d971d8250d723165, type: 3}
+      propertyPath: m_TagString
+      value: Plush
       objectReference: {fileID: 0}
     - target: {fileID: 4808575116110212, guid: d323fc18d7f7cbb4d971d8250d723165, type: 3}
       propertyPath: m_RootOrder

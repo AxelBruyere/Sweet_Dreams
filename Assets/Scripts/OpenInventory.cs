@@ -19,7 +19,7 @@ public class OpenInventory : MonoBehaviour
     void Update()
     {
         
-        //key P for pause the game
+        //key I to open inventory
         if(Input.GetKeyDown(KeyCode.I)){
             if(!InventoryIsOpen)
             {
@@ -30,13 +30,14 @@ public class OpenInventory : MonoBehaviour
             }
         }
     }
-    //fonction to resume the game
+
+    //fonction to open
     public void InventoryOpen(){
-        //show the pause menu
+        //show the inventory menu
         InventoryUI.SetActive(true);
         //stop the time flow
         Time.timeScale = 0f;
-        //bool to true to indicate that the game is paused
+        //bool to true to indicate that the inventory is open
         InventoryIsOpen = true;
         //free the cursor
         Cursor.lockState = CursorLockMode.None;
