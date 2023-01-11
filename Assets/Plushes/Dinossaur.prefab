@@ -113,7 +113,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8429019503320660298, guid: a6e428d25621838498eed77023033d4b, type: 3}
       propertyPath: m_Name
-      value: PBR_Velociraptor_Sand_Female
+      value: Dinossaur
+      objectReference: {fileID: 0}
+    - target: {fileID: 8429019503320660298, guid: a6e428d25621838498eed77023033d4b, type: 3}
+      propertyPath: m_TagString
+      value: Plush
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 565212208163397711, guid: a6e428d25621838498eed77023033d4b, type: 3}

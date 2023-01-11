@@ -2,18 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager Instance;
     public List<Item> Items = new List<Item>();
 
+    public static bool haveMonkey = false;
+    public static bool haveRabbit = false;
+    public static bool haveDinosaur = false;
+    public static bool haveAlligator = false;
+    public static bool haveElephant = false;
+
+
     public Transform ItemContent;
     public GameObject InventoryItem;
+    public GameObject PlushScene;
 
     private void Awake()
     {
         Instance = this;
+        PlushScene = GameObject.FindWithTag("Plush");
+
+        if(PlushScene != null){
+            if (haveRabbit && PlushScene.name == "Rabbit"){
+
+                //Debug.Log("ca marche");
+                PlushScene.SetActive(false);
+            }
+        }
     }
 
     public void Add(Item item)

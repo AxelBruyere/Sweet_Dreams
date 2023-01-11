@@ -468,6 +468,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Item
       objectReference: {fileID: 0}
+    - target: {fileID: 8336556784263568395, guid: 246f2e1f7d7f7434289171e8b820e201, type: 3}
+      propertyPath: m_Text
+      value: Flash light
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 246f2e1f7d7f7434289171e8b820e201, type: 3}
 --- !u!224 &4790002594617926166 stripped
