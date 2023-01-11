@@ -34,7 +34,8 @@ public class ItemPickup : MonoBehaviour
             InventoryManager.haveAlligator = true;
         }
         
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
+        Destroy(gameObject);
     }
 
     private void OnMouseDown()
