@@ -37,7 +37,7 @@ public class Hide : MonoBehaviour
     {
         //TODO - dont working
         if(isHiding){
-            if(Input.GetButtonDown("E")){
+            if(Input.GetButtonDown("Action")){
                 //Enable player
                 GameObject.Find("PlayerControllerFPS Variant 1").SetActive(true);                
                 
