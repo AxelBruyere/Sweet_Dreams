@@ -7,13 +7,14 @@ public class FlashlightHidden : MonoBehaviour
     //bool to indicate if flashlight is on/off
     private bool flashlightActive = false;
 
-    
-    public GameObject monster;
+    public GameObject PlayerControllerFPS;
 
+    public Animator anim;
     //turn off the flashlight in the beggining
     void Start()
     {
         transform.gameObject.SetActive(false);
+        anim = gameObject.GetComponent<Animator>();
     }
 
     //check if the key to turn on/off the flashlight is pressed
@@ -25,9 +26,7 @@ public class FlashlightHidden : MonoBehaviour
                 transform.gameObject.SetActive(true);
                 flashlightActive = true;
 
-                if (monster.active){
-                    Debug.Log("You lost");
-                }
+
 
             }else{
                 //turn off the flashlight
@@ -36,4 +35,7 @@ public class FlashlightHidden : MonoBehaviour
             }
         }
     }
+
+    
+
 }
