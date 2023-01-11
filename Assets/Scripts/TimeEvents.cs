@@ -47,7 +47,7 @@ public class TimeEvents : MonoBehaviour
                 anim.enabled = false;
 
                 Debug.Log("Monster appeared");
-                yield return new WaitForSeconds(0.2f);
+                yield return new WaitForSeconds(0.4f);
                 flashlightHidden.GetComponent<Light>().intensity = 100.0f;
 
                 
