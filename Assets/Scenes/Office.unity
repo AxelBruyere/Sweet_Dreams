@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 1481.7754, g: 1835.8867, b: 2430.4492, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -604,6 +604,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 235932278}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &259640224 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4996075005658483855, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
+  m_PrefabInstance: {fileID: 1602336751}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &283861702
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -667,6 +672,11 @@ PrefabInstance:
     - {fileID: 6204051434897261052, guid: 205900fadbb091d4bb74b3a6253cfbdc, type: 3}
     - {fileID: 6204051434897261053, guid: 205900fadbb091d4bb74b3a6253cfbdc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 205900fadbb091d4bb74b3a6253cfbdc, type: 3}
+--- !u!1 &286407118 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5793578771728870139, guid: 7a13da880fa85c24782c154e8140885a, type: 3}
+  m_PrefabInstance: {fileID: 3641506243592133576}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &311360907
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1526,6 +1536,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 645e4e5de731c7a4aa25ea3e587580af, type: 3}
+--- !u!1 &1037885320 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1620677938040810180, guid: 7a13da880fa85c24782c154e8140885a, type: 3}
+  m_PrefabInstance: {fileID: 3641506243592133576}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1038984702
 GameObject:
   m_ObjectHideFlags: 0
@@ -2572,6 +2587,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6850509036666693739}
     - target: {fileID: 4758444328322264136, guid: 1fdb6bb9dfaac164fafbd7a06bc336b4, type: 3}
+      propertyPath: character
+      value: 
+      objectReference: {fileID: 259640224}
+    - target: {fileID: 4758444328322264136, guid: 1fdb6bb9dfaac164fafbd7a06bc336b4, type: 3}
+      propertyPath: leaveText
+      value: 
+      objectReference: {fileID: 286407118}
+    - target: {fileID: 4758444328322264136, guid: 1fdb6bb9dfaac164fafbd7a06bc336b4, type: 3}
       propertyPath: flashlight
       value: 
       objectReference: {fileID: 653304360}
@@ -2583,6 +2606,10 @@ PrefabInstance:
       propertyPath: hideDisplay
       value: 
       objectReference: {fileID: 6850509035336766070}
+    - target: {fileID: 4758444328322264136, guid: 1fdb6bb9dfaac164fafbd7a06bc336b4, type: 3}
+      propertyPath: leaveDisplay
+      value: 
+      objectReference: {fileID: 1037885320}
     - target: {fileID: 4759529722199436939, guid: 1fdb6bb9dfaac164fafbd7a06bc336b4, type: 3}
       propertyPath: m_Name
       value: Table
