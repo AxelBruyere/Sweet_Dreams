@@ -10,6 +10,7 @@ public class animationStateController : MonoBehaviour
     public Vector2 turn;
     public float mouseSensitivity = 200;
     float xRotation = 0f;
+
     //declare reference variables
     PlayerKeyBindings keyBindings;
     //CharacterController characterController;
