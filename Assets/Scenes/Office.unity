@@ -1120,7 +1120,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80f1b5daebc065a42b877d8da7da502f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   monster: {fileID: 0}
+=======
+  monster: {fileID: 1865607427}
+>>>>>>> ad2313e607b0310e2e722962e4234e7f54fe20a5
 --- !u!1 &653304360 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 241676283904549458, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
