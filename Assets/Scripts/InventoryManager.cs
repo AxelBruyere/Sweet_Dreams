@@ -15,12 +15,13 @@ public class InventoryManager : MonoBehaviour
     public static bool haveAlligator = false;
     public static bool haveElephant = false;
 
+    public Item itemToAdd;
 
     public Transform ItemContent;
     public GameObject InventoryItem;
     GameObject PlushScene;
 
-    private void Awake()
+    public void Awake()
     {
         Instance = this;
         PlushScene = GameObject.FindWithTag("Plush");
@@ -57,6 +58,10 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
+    public void Start(){
+        Add(itemToAdd);
+    }
+
     public void Add(Item item)
     {
         Items.Add(item);
@@ -70,35 +75,35 @@ public class InventoryManager : MonoBehaviour
 
    public void ListItems()
     {
-        int index = 0;
+        
+        
         //Clean content before open.
         if(ItemContent != null)
         {
             foreach(Transform item in ItemContent)
-            {
-                if(index != 0)
-                {
-                    //Debug.Log(item.name);
-                    //Destroy(item.gameObject);
-                    //item.gameObject.SetActive(false);
-                }
-                index += 1;
+            {    
+                //Debug.Log(item.name);
+                Destroy(item.gameObject);
+                //item.gameObject.SetActive(false);
+            
+                
             }
         }
        
+      
 
         foreach(var item in Items)
         {
             Debug.Log(item);
-            /*GameObject obj = Instantiate(InventoryItem, ItemContent);
+            GameObject obj = Instantiate(InventoryItem, ItemContent);
             var itemName = obj.transform.Find("ItemName").GetComponent<Text>();
             var itemIcon = obj.transform.Find("ItemIcon").GetComponent<Image>();
 
             itemName.text = item.itemName;
             itemIcon.sprite = item.itemIcon;
 
-            itemName.text = item.transform.Find("ItemName").GetComponent<Text>();
-            itemIcon.sprite = item.transform.Find("ItemIcon").GetComponent<Image>();*/
+            itemName.text = item.itemName;
+            itemIcon.sprite = item.itemIcon;
         }
     }   
 }

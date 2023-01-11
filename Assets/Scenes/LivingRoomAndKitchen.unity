@@ -1150,6 +1150,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: 3663212071716149688, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
+      propertyPath: itemToAdd
+      value: 
+      objectReference: {fileID: 11400000, guid: 0b984328ed56b09448e8a984f402e768, type: 2}
     - target: {fileID: 3663212071716149691, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0

@@ -7,7 +7,7 @@ public class PlayerScript : MonoBehaviour
     //Criation of a player instance to keep it characteristics between scenes
     public static PlayerScript instance;
     
-    void Start()
+    void Awake()
     {
         if(instance != null){
             Destroy(gameObject);
