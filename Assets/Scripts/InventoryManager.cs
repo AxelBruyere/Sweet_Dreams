@@ -18,7 +18,7 @@ public class InventoryManager : MonoBehaviour
 
     public Transform ItemContent;
     public GameObject InventoryItem;
-    public GameObject PlushScene;
+    GameObject PlushScene;
 
     private void Awake()
     {
@@ -49,14 +49,18 @@ public class InventoryManager : MonoBehaviour
     {
         int index = 0;
         //Clean content before open.
-        foreach(Transform item in ItemContent)
+        if(ItemContent != null)
         {
-            if(index != 0)
+            foreach(Transform item in ItemContent)
             {
-                Destroy(item.gameObject);
+                if(index != 0)
+                {
+                    Destroy(item.gameObject);
+                }
+                index += 1;
             }
-            index += 1;
         }
+       
 
         foreach(var item in Items)
         {
