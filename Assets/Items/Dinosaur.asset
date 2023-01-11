@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 1
   itemName: Dinosaur
-  icon: {fileID: 21300000, guid: 6cb582aff32cbb54692f5d4325b48ec6, type: 3}
+  itemIcon: {fileID: 21300000, guid: 6cb582aff32cbb54692f5d4325b48ec6, type: 3}

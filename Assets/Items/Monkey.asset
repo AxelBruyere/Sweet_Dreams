@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 5
   itemName: Monkey
-  icon: {fileID: 21300000, guid: ba7f702be6b9b9f4cb00ebba6b9aa0d6, type: 3}
+  itemIcon: {fileID: 21300000, guid: ba7f702be6b9b9f4cb00ebba6b9aa0d6, type: 3}

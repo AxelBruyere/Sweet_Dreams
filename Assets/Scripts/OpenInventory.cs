@@ -10,6 +10,12 @@ public class OpenInventory : MonoBehaviour
     //game object that indicate the open inventory in unity
     public GameObject InventoryUI;
 
+    void Start()
+    {
+        //At the beginning inventory is closed
+        InventoryUI.SetActive(false);
+    }
+
     void Update()
     {
         
@@ -18,8 +24,8 @@ public class OpenInventory : MonoBehaviour
             if(!InventoryIsOpen)
             {
                 InventoryOpen();
-
-            }else{
+            }
+            else{
                 InventoryClose();
             }
         }
@@ -36,6 +42,8 @@ public class OpenInventory : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         //show the cursor
         Cursor.visible = true;
+        InventoryManager.Instance.ListItems();
+
     }
 
     //fonction to resume the game

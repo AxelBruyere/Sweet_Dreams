@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 2
   itemName: Rabbit
-  icon: {fileID: 21300000, guid: 2469bc0620f42bd4f8f122f3ce47bf8b, type: 3}
+  itemIcon: {fileID: 21300000, guid: 2469bc0620f42bd4f8f122f3ce47bf8b, type: 3}
