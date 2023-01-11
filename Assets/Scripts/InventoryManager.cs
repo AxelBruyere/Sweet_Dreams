@@ -29,10 +29,15 @@ public class InventoryManager : MonoBehaviour
 
    public void ListItems()
     {
+        int index = 0;
         //Clean content before open.
         foreach(Transform item in ItemContent)
         {
-            Destroy(item.gameObject);
+            if(index != 0)
+            {
+                Destroy(item.gameObject);
+            }
+            index += 1;
         }
 
         foreach(var item in Items)
