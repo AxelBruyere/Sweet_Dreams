@@ -55,19 +55,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flashlightLight: {fileID: 241676283904549458}
---- !u!114 &6177895242079901141
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4996075005658483855}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6967121eb50899f4d8d346d47546190c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  InventoryUI: {fileID: 0}
+  monster: {fileID: 0}
 --- !u!114 &8378180890567586199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81,6 +69,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ToTarget: 0
+--- !u!114 &5780302358828699738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4996075005658483855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6967121eb50899f4d8d346d47546190c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InventoryUI: {fileID: 921583314732529026}
 --- !u!114 &4064659615823306424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,6 +118,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4996075005658483849}
     m_Modifications:
+    - target: {fileID: 4790002594617926166, guid: 09d30b18e8342ad41948c0101f076652, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4790002594617926166, guid: 09d30b18e8342ad41948c0101f076652, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4790002594617926166, guid: 09d30b18e8342ad41948c0101f076652, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 4790002594617926166, guid: 09d30b18e8342ad41948c0101f076652, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 4790002594617926166, guid: 09d30b18e8342ad41948c0101f076652, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 135
+      objectReference: {fileID: 0}
+    - target: {fileID: 4790002594617926166, guid: 09d30b18e8342ad41948c0101f076652, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -125
+      objectReference: {fileID: 0}
+    - target: {fileID: 4874633574131399581, guid: 09d30b18e8342ad41948c0101f076652, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4874633574131399581, guid: 09d30b18e8342ad41948c0101f076652, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4874633574131399581, guid: 09d30b18e8342ad41948c0101f076652, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5110320687935683232, guid: 09d30b18e8342ad41948c0101f076652, type: 3}
       propertyPath: m_Name
       value: CanvasInventory
@@ -205,8 +242,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5110320689825423373, guid: 09d30b18e8342ad41948c0101f076652, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09d30b18e8342ad41948c0101f076652, type: 3}
+--- !u!1 &921583314732529026 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5110320689121540325, guid: 09d30b18e8342ad41948c0101f076652, type: 3}
+  m_PrefabInstance: {fileID: 5341725124857171303}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5698650573970178357
 PrefabInstance:
   m_ObjectHideFlags: 0
