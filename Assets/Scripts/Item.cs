@@ -9,4 +9,6 @@ public class Item : ScriptableObject
     [Header("Item")]
     public string itemName;
     public Sprite itemIcon;
+
+    public Item GetItem() {return this;}
 }

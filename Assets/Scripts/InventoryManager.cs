@@ -7,6 +7,8 @@ using System;
 public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager Instance;
+
+    [SerializeField] private GameObject slotHolder;
     public List<Item> Items = new List<Item>();
 
     public static bool haveMonkey = false;
@@ -15,11 +17,13 @@ public class InventoryManager : MonoBehaviour
     public static bool haveAlligator = false;
     public static bool haveElephant = false;
 
-    public Item itemToAdd;
+    [SerializeField] private Item itemToAdd;
 
-    public Transform ItemContent;
-    public GameObject InventoryItem;
-    GameObject PlushScene;
+    private GameObject[] slots;
+
+    /*public Transform ItemContent;
+    public GameObject InventoryItem;*/
+    private GameObject PlushScene;
 
     public void Awake()
     {
@@ -58,26 +62,54 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    public void Start(){
+    private void Start(){
+        slots = new GameObject[slotHolder.transform.childCount];
+        //set all the slots
+        for(int i = 0; i<slotHolder.transform.childCount; i++)
+        {
+            slots[i] = slotHolder.transform.GetChild(i).gameObject;
+        }
+
+        RefreshUI();
+
         Add(itemToAdd);
+    }
+
+    public void RefreshUI(){
+        for(int i = 0; i<slots.Length; i++)
+        {
+            try
+            {
+                slots[i].transform.GetChild(0).GetComponent<Image>().enabled = true;
+                slots[i].transform.GetChild(0).GetComponent<Image>().sprite = Items[i].itemIcon;
+            }
+            catch
+            {
+                slots[i].transform.GetChild(0).GetComponent<Image>().sprite = null;
+                slots[i].transform.GetChild(0).GetComponent<Image>().enabled = false;
+
+            }
+        }
     }
 
     public void Add(Item item)
     {
+        //Debug.Log(item);
         Items.Add(item);
+        RefreshUI();
     }
 
     public void Remove(Item item)
     {
         Items.Remove(item);
+        RefreshUI();
     }
     
 
-   public void ListItems()
+   /*public void ListItems()
     {
         
-        
-        //Clean content before open.
+       /* //Clean content before open.
         if(ItemContent != null)
         {
             foreach(Transform item in ItemContent)
@@ -105,5 +137,5 @@ public class InventoryManager : MonoBehaviour
             itemName.text = item.itemName;
             itemIcon.sprite = item.itemIcon;
         }
-    }   
+    }  */
 }

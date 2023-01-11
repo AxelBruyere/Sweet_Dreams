@@ -41,7 +41,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b68b169bd248eb341bd61db1078f2400, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Item: {fileID: 11400000, guid: 8ba55df51e7fb344fb7df6f96698934a, type: 2}
+  itemPicked: {fileID: 11400000, guid: 8ba55df51e7fb344fb7df6f96698934a, type: 2}
 --- !u!114 &8062483187609305941
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -4,32 +4,43 @@ using UnityEngine;
 
 public class ItemPickup : MonoBehaviour
 {  
-    public Item Item;
+    public Item itemPicked;
+    public InventoryManager inventory;
+
+    public GameObject player;
+
+    public void Awake()
+    {
+        player = GameObject.FindWithTag("Player");
+        inventory = player.transform.Find("InventoryManager").GetComponent<InventoryManager>();
+        //Debug.Log(inventory);
+    }
 
     void Pickup()
     {
-        InventoryManager.Instance.Add(Item);
-        if (Item.itemName == "Monkey")
+        //Debug.Log(itemPicked);
+        inventory.Add(itemPicked);
+        if (itemPicked.itemName == "Monkey")
         {
             InventoryManager.haveMonkey = true;
         }
 
-        if (Item.itemName == "Rabbit")
+        if (itemPicked.itemName == "Rabbit")
         {
             InventoryManager.haveRabbit = true;
         }
 
-        if (Item.itemName == "Elephant")
+        if (itemPicked.itemName == "Elephant")
         {
             InventoryManager.haveElephant = true;
         }
 
-        if (Item.itemName == "Dinosaur")
+        if (itemPicked.itemName == "Dinosaur")
         {
             InventoryManager.haveDinosaur = true;
         }
 
-        if (Item.itemName == "Alligator")
+        if (itemPicked.itemName == "Alligator")
         {
             InventoryManager.haveAlligator = true;
         }
