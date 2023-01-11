@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1481.7754, g: 1835.8867, b: 2430.4492, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -136,7 +136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2520778222865211863, guid: 7efed3281286e9d4d88775aa9816869c, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2520778222865211863, guid: 7efed3281286e9d4d88775aa9816869c, type: 3}
       propertyPath: m_TagString
@@ -901,7 +901,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6850509036159761401, guid: c38d99ab2811d304c952ec8f77513238, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6850509036159761405, guid: c38d99ab2811d304c952ec8f77513238, type: 3}
       propertyPath: m_Pivot.x
@@ -2224,6 +2224,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
+--- !u!20 &1660988001 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 4996075005794178670, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
+  m_PrefabInstance: {fileID: 1602336751}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1815715923
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2570,6 +2575,10 @@ PrefabInstance:
       propertyPath: flashlight
       value: 
       objectReference: {fileID: 653304360}
+    - target: {fileID: 4758444328322264136, guid: 1fdb6bb9dfaac164fafbd7a06bc336b4, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 1660988001}
     - target: {fileID: 4758444328322264136, guid: 1fdb6bb9dfaac164fafbd7a06bc336b4, type: 3}
       propertyPath: hideDisplay
       value: 
