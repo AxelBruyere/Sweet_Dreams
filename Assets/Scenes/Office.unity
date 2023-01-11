@@ -1120,11 +1120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80f1b5daebc065a42b877d8da7da502f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  monster: {fileID: 0}
-=======
   monster: {fileID: 1865607427}
->>>>>>> ad2313e607b0310e2e722962e4234e7f54fe20a5
 --- !u!1 &653304360 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 241676283904549458, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
@@ -2021,11 +2017,7 @@ PrefabInstance:
     - target: {fileID: 207976750094243782, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
       propertyPath: ItemContent
       value: 
-      objectReference: {fileID: 1602336752}
-    - target: {fileID: 207976750094243782, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
-      propertyPath: InventoryItem
-      value: 
-      objectReference: {fileID: 1602336753}
+      objectReference: {fileID: 0}
     - target: {fileID: 601264945417596785, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2156,16 +2148,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
---- !u!224 &1602336752 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 921583315238759786, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
-  m_PrefabInstance: {fileID: 1602336751}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1602336753 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5618429662508597251, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
-  m_PrefabInstance: {fileID: 1602336751}
-  m_PrefabAsset: {fileID: 0}
 --- !u!20 &1660988001 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 4996075005794178670, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
