@@ -8,6 +8,8 @@ public class Flashlight : MonoBehaviour
     //bool to indicate if flashlight is on/off
     private bool flashlightActive = false;
 
+    public GameObject monster;
+
     //turn off the flashlight in the beggining
     void Start()
     {
@@ -22,6 +24,9 @@ public class Flashlight : MonoBehaviour
                 //turn on the flashlight
                 flashlightLight.gameObject.SetActive(true);
                 flashlightActive = true;
+                //if (monster.activeSelf){
+                  //  Debug.Log("You lost");
+                //}
             }else{
                 //turn off the flashlight
                 flashlightLight.gameObject.SetActive(false);
