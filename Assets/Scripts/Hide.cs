@@ -19,6 +19,8 @@ public class Hide : MonoBehaviour
     //audio control
     public AudioListener mainAudio;
     public AudioListener hidingAudio;
+    public AudioSource mainMusic;
+    public AudioSource hidingMusic;
 
     //unity event
     public UnityEvent onInteract;
@@ -46,14 +48,18 @@ public class Hide : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         mainCamera = Camera.main;
         mainAudio = player.transform.Find("Character").gameObject.transform.Find("Main Camera").gameObject.GetComponent<AudioListener>();
+        mainMusic = player.transform.Find("Character").gameObject.transform.Find("Main Camera").gameObject.GetComponent<AudioSource>();
         //Debug.Log(player.transform.Find("Character").gameObject.transform.Find("Main Camera").gameObject.transform.Find("Flashlight").gameObject);
         flashlight = player.transform.Find("Character").gameObject.transform.Find("Main Camera").gameObject.transform.Find("Flashlight").gameObject;
         //test = player.Find("Character");
         //set the active camera
         mainCamera.enabled = true;
         mainAudio.enabled = true;
+        mainMusic.Play();
         hidingCamera.enabled = false;
         hidingAudio.enabled = false;
+        hidingMusic.Pause();
+
     }
 
 
@@ -74,8 +80,10 @@ public class Hide : MonoBehaviour
                 //Switch cameras
                 mainCamera.enabled = true;
                 mainAudio.enabled = true;
+                mainMusic.Play();
                 hidingCamera.enabled = false;
                 hidingAudio.enabled = false;
+                hidingMusic.Pause();
 
                 isHiding = false;
                 justHide = false;
@@ -108,9 +116,10 @@ public class Hide : MonoBehaviour
                     //Switch cameras
                     mainCamera.enabled = false;
                     mainAudio.enabled = false;
+                    mainMusic.Pause();
                     hidingCamera.enabled = true;
                     hidingAudio.enabled = true;
-
+                    hidingMusic.Play();
                     //flashlight.SetActive(false);
                     //isFlashLightOn = false;
                     if (isFlashLightOn){

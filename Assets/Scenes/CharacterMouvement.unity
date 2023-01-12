@@ -406,7 +406,7 @@ PrefabInstance:
     - target: {fileID: 422955882148130359, guid: 30f513dfb27557840b32a26ccfae0a56, type: 3}
       propertyPath: flashlightHidden
       value: 
-      objectReference: {fileID: 1486034570}
+      objectReference: {fileID: 0}
     - target: {fileID: 3260836961098228928, guid: 30f513dfb27557840b32a26ccfae0a56, type: 3}
       propertyPath: hideText
       value: 
@@ -856,6 +856,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3663212071716149691, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4996075005658483849, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -956,11 +960,6 @@ Transform:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7897307201267708835, guid: 7a13da880fa85c24782c154e8140885a, type: 3}
   m_PrefabInstance: {fileID: 1991688294}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1486034570 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5101071955896879195, guid: 30f513dfb27557840b32a26ccfae0a56, type: 3}
-  m_PrefabInstance: {fileID: 435744283}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1492508193
 PrefabInstance:
