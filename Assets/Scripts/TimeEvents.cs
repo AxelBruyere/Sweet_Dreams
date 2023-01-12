@@ -82,7 +82,7 @@ public class TimeEvents : MonoBehaviour
             if (!hidingCamera.enabled && !flashlightNotHidden.activeSelf){
                 mainCamera.GetComponent<LookWithMouse>().enabled = false; //Disables camera movements
                 transform.GetComponent<PlayerMovement>().enabled = false; //Disables character movements
-                flashlightNotHidden.GetComponent<FlashlightHidden>().enabled = false;//Disable flashlight controls
+                transform.GetComponent<Flashlight>().enabled = false;//Disable flashlight controls
 
                 monsterNotHidden.SetActive(true); //Makes the monster appears
                 mainCamera.transform.eulerAngles = new Vector3(-30.0f,mainCamera.transform.eulerAngles.y,mainCamera.transform.eulerAngles.z); //Rotates the camera in order to see the monster
