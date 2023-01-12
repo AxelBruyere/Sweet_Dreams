@@ -887,10 +887,32 @@ PrefabInstance:
       propertyPath: m_Name
       value: HideBox
       objectReference: {fileID: 0}
+    - target: {fileID: 4402391766788507123, guid: 41a545e37cced5f4290bb6ba0e5ef037, type: 3}
+      propertyPath: flashlight
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4402391766788507123, guid: 41a545e37cced5f4290bb6ba0e5ef037, type: 3}
+      propertyPath: hidingAudio
+      value: 
+      objectReference: {fileID: 6805806191398613485}
+    - target: {fileID: 4402391766788507123, guid: 41a545e37cced5f4290bb6ba0e5ef037, type: 3}
+      propertyPath: flashlightHidden
+      value: 
+      objectReference: {fileID: 80328323824601636}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a545e37cced5f4290bb6ba0e5ef037, type: 3}
 --- !u!4 &4758444328322264139 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4402391766788507120, guid: 41a545e37cced5f4290bb6ba0e5ef037, type: 3}
+  m_PrefabInstance: {fileID: 9156112829346376123}
+  m_PrefabAsset: {fileID: 0}
+--- !u!81 &6805806191398613485 stripped
+AudioListener:
+  m_CorrespondingSourceObject: {fileID: 2405512326517200982, guid: 41a545e37cced5f4290bb6ba0e5ef037, type: 3}
+  m_PrefabInstance: {fileID: 9156112829346376123}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &80328323824601636 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9082755719096279967, guid: 41a545e37cced5f4290bb6ba0e5ef037, type: 3}
   m_PrefabInstance: {fileID: 9156112829346376123}
   m_PrefabAsset: {fileID: 0}

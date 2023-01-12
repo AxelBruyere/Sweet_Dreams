@@ -16,6 +16,10 @@ public class Hide : MonoBehaviour
     public Camera mainCamera;
     public Camera hidingCamera;
 
+    //audio control
+    public AudioListener mainAudio;
+    public AudioListener hidingAudio;
+
     //unity event
     public UnityEvent onInteract;
     //distance player - targer
@@ -41,12 +45,15 @@ public class Hide : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player");
         mainCamera = Camera.main;
+        mainAudio = player.transform.Find("Character").gameObject.transform.Find("Main Camera").gameObject.GetComponent<AudioListener>();
         //Debug.Log(player.transform.Find("Character").gameObject.transform.Find("Main Camera").gameObject.transform.Find("Flashlight").gameObject);
         flashlight = player.transform.Find("Character").gameObject.transform.Find("Main Camera").gameObject.transform.Find("Flashlight").gameObject;
         //test = player.Find("Character");
         //set the active camera
         mainCamera.enabled = true;
+        mainAudio.enabled = true;
         hidingCamera.enabled = false;
+        hidingAudio.enabled = false;
     }
 
 
@@ -66,7 +73,9 @@ public class Hide : MonoBehaviour
 
                 //Switch cameras
                 mainCamera.enabled = true;
+                mainAudio.enabled = true;
                 hidingCamera.enabled = false;
+                hidingAudio.enabled = false;
 
                 isHiding = false;
                 justHide = false;
@@ -98,7 +107,9 @@ public class Hide : MonoBehaviour
 
                     //Switch cameras
                     mainCamera.enabled = false;
+                    mainAudio.enabled = false;
                     hidingCamera.enabled = true;
+                    hidingAudio.enabled = true;
 
                     //flashlight.SetActive(false);
                     //isFlashLightOn = false;

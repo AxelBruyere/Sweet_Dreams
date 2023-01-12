@@ -308,6 +308,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flashlightLight: {fileID: 7223251833994067865}
+  monster: {fileID: 0}
 --- !u!1 &6802596729109536605
 GameObject:
   m_ObjectHideFlags: 0
@@ -531,8 +532,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caddbbc237edee942a4b453a628816d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  flashlight: {fileID: 7223251833994067865}
   mainCamera: {fileID: 0}
   hidingCamera: {fileID: 2704875611907323362}
+  mainAudio: {fileID: 0}
+  hidingAudio: {fileID: 3352993587416367115}
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -545,8 +550,7 @@ MonoBehaviour:
   leaveText: {fileID: 0}
   theHidingPlace: {fileID: 7133390321741026515}
   isFlashLightOn: 0
-  flashlight: {fileID: 7223251833994067865}
-  character: {fileID: 0}
+  flashlightHidden: {fileID: 7223251833994067865}
 --- !u!1 &7223251833994067865
 GameObject:
   m_ObjectHideFlags: 0
