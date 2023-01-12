@@ -6,7 +6,7 @@ public class SoundsController : MonoBehaviour
 {
     public AudioSource footStepSound;
     public AudioSource FlashlightSound;
-    public AudioSource DoorSound;
+    //public AudioSource DoorSound;
     public AudioSource InventorySound;
 
     // Update is called once per frame
@@ -21,15 +21,15 @@ public class SoundsController : MonoBehaviour
             FlashlightSound.enabled = true;
         }
 
-        else if(Input.GetKey(KeyCode.E))
+        /*else if(Input.GetKey(KeyCode.E))
         {
             DoorSound.enabled = true;
-        }
+        }*/
         else
         {
             footStepSound.enabled = false;
             FlashlightSound.enabled = false;
-            DoorSound.enabled = false;
+            //DoorSound.enabled = false;
         }
     }
 

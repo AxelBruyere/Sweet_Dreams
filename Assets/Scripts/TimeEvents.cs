@@ -23,7 +23,7 @@ public class TimeEvents : MonoBehaviour
 
     
     void Start(){ 
-        StartCoroutine(monsterAppearance(3,1,2));
+        StartCoroutine(monsterAppearance(5,5,5));
         animHidden = flashlightHidden.GetComponent<Animator>();
         animNotHidden = flashlightNotHidden.GetComponent<Animator>();
     }

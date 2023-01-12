@@ -128,6 +128,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6256899311316445717, guid: 3435ff82d8f30464782eca6751c81c92, type: 3}
   m_PrefabInstance: {fileID: 936919174}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &44104387 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2311824192027621687, guid: 7efed3281286e9d4d88775aa9816869c, type: 3}
+  m_PrefabInstance: {fileID: 1839082290}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &73669344 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5529702074040048714, guid: 7fd5bfb3dec35694b82447ce0a322bed, type: 3}
@@ -2200,6 +2205,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1857349555}
     m_Modifications:
+    - target: {fileID: 2311824192027621687, guid: 7efed3281286e9d4d88775aa9816869c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2311824192027621687, guid: 7efed3281286e9d4d88775aa9816869c, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2520778222865211863, guid: 7efed3281286e9d4d88775aa9816869c, type: 3}
       propertyPath: m_Name
       value: door 1
@@ -2264,6 +2277,10 @@ PrefabInstance:
       propertyPath: exitName
       value: Bathroom
       objectReference: {fileID: 0}
+    - target: {fileID: 7764721311691827497, guid: 7efed3281286e9d4d88775aa9816869c, type: 3}
+      propertyPath: DoorSound
+      value: 
+      objectReference: {fileID: 44104387}
     - target: {fileID: 7764721311691827497, guid: 7efed3281286e9d4d88775aa9816869c, type: 3}
       propertyPath: ActionText
       value: 
@@ -2797,6 +2814,10 @@ PrefabInstance:
       propertyPath: flashlightHidden
       value: 
       objectReference: {fileID: 1702738897}
+    - target: {fileID: 2031048887891166043, guid: 71d50ca69424dc44eb6d0dbec0377bf2, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4846377534154389650, guid: 71d50ca69424dc44eb6d0dbec0377bf2, type: 3}
       propertyPath: m_IsActive
       value: 1

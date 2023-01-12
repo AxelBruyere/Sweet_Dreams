@@ -15,11 +15,12 @@ public class DoorCell : MonoBehaviour
     public GameObject ActionText;
     public GameObject theDoor;
     //door noise
-    //public AudioSource CreakSound;
+    public AudioSource DoorSound;
 
     // Update is called once per frame
     void Update()
     {
+        //DoorSound.enabled = false;
         //update the discance from the player to the target every interaction
         theDistance = PlayerCasting.DistanceFromTarget;
     }
@@ -41,6 +42,7 @@ public class DoorCell : MonoBehaviour
         //get the action key
         if(Input.GetButtonDown("Action")){
             if(theDistance <= 3){
+                DoorSound.Play();
                 onInteract.Invoke();
             }
         }

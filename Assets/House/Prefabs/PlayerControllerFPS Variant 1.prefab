@@ -1210,6 +1210,10 @@ PrefabInstance:
       propertyPath: m_InnerSpotAngle
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 2381370277775211887, guid: 573ac53c334415945bf239de2c2f0511, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3708501163726683019, guid: 573ac53c334415945bf239de2c2f0511, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.3
@@ -1257,6 +1261,18 @@ PrefabInstance:
     - target: {fileID: 4457946947931158276, guid: 573ac53c334415945bf239de2c2f0511, type: 3}
       propertyPath: m_CustomSpotLightShadowCone
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4810294552724338138, guid: 573ac53c334415945bf239de2c2f0511, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5174274373321777932, guid: 573ac53c334415945bf239de2c2f0511, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5984912914122291809, guid: 573ac53c334415945bf239de2c2f0511, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 573ac53c334415945bf239de2c2f0511, type: 3}
