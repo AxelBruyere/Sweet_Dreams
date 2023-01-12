@@ -6,6 +6,12 @@ using UnityEngine.Events;
 
 public class Hide : MonoBehaviour
 {  
+    //GameObjects retrieve auto
+    //Player
+    public GameObject player;
+    //Flashlight
+    public GameObject flashlight;
+
     //camera control
     public Camera mainCamera;
     public Camera hidingCamera;
@@ -26,12 +32,18 @@ public class Hide : MonoBehaviour
     public GameObject leaveText;
     public GameObject theHidingPlace;
     public bool isFlashLightOn;
-    public GameObject flashlight;
+    
     public GameObject flashlightHidden;
-    public GameObject character;
-
+    
+    //public GameObject test;
+    
     void Start()
     {
+        player = GameObject.FindWithTag("Player");
+        mainCamera = Camera.main;
+        //Debug.Log(player.transform.Find("Character").gameObject.transform.Find("Main Camera").gameObject.transform.Find("Flashlight").gameObject);
+        flashlight = player.transform.Find("Character").gameObject.transform.Find("Main Camera").gameObject.transform.Find("Flashlight").gameObject;
+        //test = player.Find("Character");
         //set the active camera
         mainCamera.enabled = true;
         hidingCamera.enabled = false;
@@ -50,7 +62,7 @@ public class Hide : MonoBehaviour
             if(Input.GetButtonDown("Action")){
                 //Enable player
                 //GameObject.Find("PlayerControllerFPS Variant 1").transform.GetChild(0).SetActive(true);                
-                character.transform.GetChild(0).gameObject.SetActive(true);
+                player.transform.GetChild(0).gameObject.SetActive(true);
 
                 //Switch cameras
                 mainCamera.enabled = true;
@@ -82,7 +94,7 @@ public class Hide : MonoBehaviour
                 if(Input.GetButtonDown("Action")){
                     //Disable player
                     //GameObject.Find("PlayerControllerFPS Variant 1").transform.GetChild(0).SetActive(false);
-                    character.transform.GetChild(0).gameObject.SetActive(false);
+                    player.transform.GetChild(0).gameObject.SetActive(false);
 
                     //Switch cameras
                     mainCamera.enabled = false;
