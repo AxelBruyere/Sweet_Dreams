@@ -143,7 +143,7 @@ MonoBehaviour:
   ActionDisplay: {fileID: 0}
   ActionText: {fileID: 0}
   theDoor: {fileID: 5383054127342285909}
-  DoorSound: {fileID: 214262378461313976}
+  DoorSound: {fileID: 8300000, guid: 52aefe49c8a26d841a41aa459a0f9995, type: 3}
 --- !u!82 &214262378461313976
 AudioSource:
   m_ObjectHideFlags: 0

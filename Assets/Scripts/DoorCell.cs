@@ -19,11 +19,18 @@ public class DoorCell : MonoBehaviour
     private float _duration;
     private AudioSource audiosource;
 
+    private bool doorOpened = false;
+
     void Awake(){
         audiosource = GetComponent<AudioSource>();
         audiosource.clip = DoorSound;
         _duration = DoorSound.length;
     }
+
+    /*void Start()
+    {
+        StartCoroutine(Wait());
+    }*/
 
     // Update is called once per frame
     void Update()
@@ -31,6 +38,9 @@ public class DoorCell : MonoBehaviour
         //DoorSound.enabled = false;
         //update the discance from the player to the target every interaction
         theDistance = PlayerCasting.DistanceFromTarget;
+        if(doorOpened && !audiosource.isPlaying){
+           onInteract.Invoke();
+        }
     }
 
     //function if the mouse is pointing the door
@@ -45,8 +55,10 @@ public class DoorCell : MonoBehaviour
             if(Input.GetButtonDown("Action")){
                 //DoorSound.Play();
                 audiosource.Play();
-                Wait();
-                //onInteract.Invoke();
+                
+                doorOpened = true;
+                //Wait();
+                //
                 
             }
         }else{
@@ -65,10 +77,10 @@ public class DoorCell : MonoBehaviour
         ActionText.SetActive(false);
     }
 
-    IEnumerator Wait()
+    /*IEnumerator Wait()
     {
         Debug.Log(_duration);
-        yield return new WaitForSeconds(_duration);
+        yield return new WaitForSecondsRealtime(_duration);
         
-    }
+    }*/
 }
