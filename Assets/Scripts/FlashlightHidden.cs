@@ -9,12 +9,10 @@ public class FlashlightHidden : MonoBehaviour
     public Camera cameraHidden;
     public GameObject PlayerControllerFPS;
 
-    public Animator anim;
     //turn off the flashlight in the beggining
     void Start()
     {
         transform.gameObject.SetActive(false);
-        anim = gameObject.GetComponent<Animator>();
     }
 
     //check if the key to turn on/off the flashlight is pressed
