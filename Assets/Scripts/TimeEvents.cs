@@ -44,6 +44,7 @@ public class TimeEvents : MonoBehaviour
 
             /*If you're hidden with the light on when the monster arrives */
             if (hidingCamera.enabled && flashlightHidden.activeSelf){
+                flashlightHidden.GetComponent<FlashlightHidden>().enabled = false;//Disable flashlight controls
                 animHidden.enabled = true; //Triggers blinking light animation
                 while (animHidden.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0){
                     yield return new WaitForSeconds(0.1f); //Waits for animation end
@@ -54,7 +55,7 @@ public class TimeEvents : MonoBehaviour
                 //////////////////////////////////////////////
                 //////////////////////////////////////////////hidingCamera.GetComponent<LookWithMouse>().enabled = false; //Disables camera movements
                 /////////////////////////////////////////////
-
+                hidingCamera.transform.eulerAngles = new Vector3(0.0f,0.0f,0.0f);
                 yield return new WaitForSeconds(0.4f); //Waits a few frames
                 flashlightHidden.GetComponent<Light>().intensity = 100.0f; //Makes the light turns back on 
 
@@ -62,6 +63,7 @@ public class TimeEvents : MonoBehaviour
 
             /*If you're not hidden and the light is on when the monster arrives */
             if (!hidingCamera.enabled && flashlightNotHidden.activeSelf){
+                transform.GetComponent<Flashlight>().enabled = false;//Disable flashlight controls
                 animNotHidden.enabled = true; //Triggers blinking light animation
                 while (animNotHidden.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0){
                     yield return new WaitForSeconds(0.1f); //Waits for animation end
@@ -70,8 +72,6 @@ public class TimeEvents : MonoBehaviour
                 animNotHidden.enabled = false; // Disables animation
                 mainCamera.GetComponent<LookWithMouse>().enabled = false; //Disables camera movements
                 transform.GetComponent<PlayerMovement>().enabled = false; //Disables character movements
-                Debug.Log(mainCamera.transform.eulerAngles.y);
-
                 mainCamera.transform.eulerAngles = new Vector3(-30.0f,mainCamera.transform.eulerAngles.y,mainCamera.transform.eulerAngles.z); //Rotates the camera in order to see the monster
                 yield return new WaitForSeconds(0.4f); //Waits a few frames
                 flashlightNotHidden.GetComponent<Light>().intensity = 100.0f; //Makes the light turns back on
@@ -79,28 +79,28 @@ public class TimeEvents : MonoBehaviour
 
 
             /*If you're not hidden and the light is off when the monster arrives */
+            if (!hidingCamera.enabled && !flashlightNotHidden.activeSelf){
+                mainCamera.GetComponent<LookWithMouse>().enabled = false; //Disables camera movements
+                transform.GetComponent<PlayerMovement>().enabled = false; //Disables character movements
+                flashlightNotHidden.GetComponent<FlashlightHidden>().enabled = false;//Disable flashlight controls
 
+                monsterNotHidden.SetActive(true); //Makes the monster appears
+                mainCamera.transform.eulerAngles = new Vector3(-30.0f,mainCamera.transform.eulerAngles.y,mainCamera.transform.eulerAngles.z); //Rotates the camera in order to see the monster
+                flashlightNotHidden.SetActive(true);//Active the flashlight
+            }
 
 
             /*If you're hidden and the light is off when the monster arrives */
-
-
-
-
-            else{
-                
-            /*wait for the monster leaving : you can get out of the hiding area */
-                yield return new WaitForSeconds(timeBeforeLeaving);
-                monsterHere = false;
-                monsterHidden.SetActive(false); 
+            if (hidingCamera.enabled && !flashlightHidden.activeSelf){
+                monsterHidden.SetActive(true); //Makes the monster appears in order to have it in front of the player in case he/she turns the light back on
+                monsterHere = true; //Useful to manage the case the players turns de light back on before the monster leaves
+                yield return new WaitForSeconds(timeBeforeLeaving); //Waits until the monster leaves
+                monsterHere = false; 
+                monsterHidden.SetActive(false); //Makes the monster disappears
             }
 
-        }
-        
-        //do things
-    }
 
-    void hiddenLightOn(){
+        }
         
     }
 
