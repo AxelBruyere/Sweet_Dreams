@@ -129,21 +129,21 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 7764721311691827496}
         m_TargetAssemblyTypeName: SceneExit, Assembly-CSharp
-        m_MethodName: ButtonMoveScene
+        m_MethodName: ButonMoveScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: LivingRoomAndKitchen
-          m_BoolArgument: 1
+          m_StringArgument: Corridor
+          m_BoolArgument: 0
         m_CallState: 2
   theDistance: 0
   ActionDisplay: {fileID: 0}
   ActionText: {fileID: 0}
   theDoor: {fileID: 2520778222865211863}
-  DoorSound: {fileID: 2311824192027621687}
+  DoorSound: {fileID: 0}
 --- !u!82 &2311824192027621687
 AudioSource:
   m_ObjectHideFlags: 0

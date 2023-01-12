@@ -1263,6 +1263,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7764721311691827497, guid: 7efed3281286e9d4d88775aa9816869c, type: 3}
+      propertyPath: DoorSound
+      value: 
+      objectReference: {fileID: 651646095}
+    - target: {fileID: 7764721311691827497, guid: 7efed3281286e9d4d88775aa9816869c, type: 3}
       propertyPath: ActionText
       value: 
       objectReference: {fileID: 82834276}
@@ -1280,6 +1284,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7efed3281286e9d4d88775aa9816869c, type: 3}
+--- !u!82 &651646095 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2311824192027621687, guid: 7efed3281286e9d4d88775aa9816869c, type: 3}
+  m_PrefabInstance: {fileID: 651646094}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &666428380
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1317,7 +1326,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5383054127341791349, guid: e16fb40b1e07e3742b7467c0c5ae5e28, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 35.99632
+      value: 35.9
       objectReference: {fileID: 0}
     - target: {fileID: 5383054127341791349, guid: e16fb40b1e07e3742b7467c0c5ae5e28, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1755,6 +1764,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7764721311691827497, guid: 7efed3281286e9d4d88775aa9816869c, type: 3}
+      propertyPath: DoorSound
+      value: 
+      objectReference: {fileID: 771239396}
+    - target: {fileID: 7764721311691827497, guid: 7efed3281286e9d4d88775aa9816869c, type: 3}
       propertyPath: ActionText
       value: 
       objectReference: {fileID: 82834276}
@@ -1775,6 +1788,11 @@ PrefabInstance:
 --- !u!4 &771239395 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2520778222865251831, guid: 7efed3281286e9d4d88775aa9816869c, type: 3}
+  m_PrefabInstance: {fileID: 771239394}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &771239396 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2311824192027621687, guid: 7efed3281286e9d4d88775aa9816869c, type: 3}
   m_PrefabInstance: {fileID: 771239394}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &818745038
@@ -2110,6 +2128,7 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 7764721311691827496, guid: 7efed3281286e9d4d88775aa9816869c, type: 3}
     - {fileID: 7764721311691827497, guid: 7efed3281286e9d4d88775aa9816869c, type: 3}
+    - {fileID: 2311824192027621687, guid: 7efed3281286e9d4d88775aa9816869c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7efed3281286e9d4d88775aa9816869c, type: 3}
 --- !u!4 &1031093568 stripped
 Transform:
@@ -3006,6 +3025,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7764721311691827497, guid: 7efed3281286e9d4d88775aa9816869c, type: 3}
+      propertyPath: DoorSound
+      value: 
+      objectReference: {fileID: 1553966744}
+    - target: {fileID: 7764721311691827497, guid: 7efed3281286e9d4d88775aa9816869c, type: 3}
       propertyPath: ActionText
       value: 
       objectReference: {fileID: 82834276}
@@ -3026,6 +3049,11 @@ PrefabInstance:
 --- !u!4 &1553966743 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2520778222865251831, guid: 7efed3281286e9d4d88775aa9816869c, type: 3}
+  m_PrefabInstance: {fileID: 1553966742}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1553966744 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2311824192027621687, guid: 7efed3281286e9d4d88775aa9816869c, type: 3}
   m_PrefabInstance: {fileID: 1553966742}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1619320515
@@ -3923,6 +3951,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7764721311691827497, guid: 7efed3281286e9d4d88775aa9816869c, type: 3}
+      propertyPath: DoorSound
+      value: 
+      objectReference: {fileID: 7516482786801564558}
+    - target: {fileID: 7764721311691827497, guid: 7efed3281286e9d4d88775aa9816869c, type: 3}
       propertyPath: ActionText
       value: 
       objectReference: {fileID: 82834276}
@@ -3934,5 +3966,14 @@ PrefabInstance:
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ButonMoveScene
       objectReference: {fileID: 0}
+    - target: {fileID: 7764721311691827497, guid: 7efed3281286e9d4d88775aa9816869c, type: 3}
+      propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: LivingRoom
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7efed3281286e9d4d88775aa9816869c, type: 3}
+--- !u!82 &7516482786801564558 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2311824192027621687, guid: 7efed3281286e9d4d88775aa9816869c, type: 3}
+  m_PrefabInstance: {fileID: 7516482786801564557}
+  m_PrefabAsset: {fileID: 0}

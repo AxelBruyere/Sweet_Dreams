@@ -128,11 +128,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6256899311316445717, guid: 3435ff82d8f30464782eca6751c81c92, type: 3}
   m_PrefabInstance: {fileID: 936919174}
   m_PrefabAsset: {fileID: 0}
---- !u!82 &44104387 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 2311824192027621687, guid: 7efed3281286e9d4d88775aa9816869c, type: 3}
-  m_PrefabInstance: {fileID: 1839082290}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &73669344 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5529702074040048714, guid: 7fd5bfb3dec35694b82447ce0a322bed, type: 3}
@@ -2192,6 +2187,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8940593070877794643, guid: ba81329604a9dc4439a7d704a4a33b68, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8940593071527821598, guid: ba81329604a9dc4439a7d704a4a33b68, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -2280,7 +2279,7 @@ PrefabInstance:
     - target: {fileID: 7764721311691827497, guid: 7efed3281286e9d4d88775aa9816869c, type: 3}
       propertyPath: DoorSound
       value: 
-      objectReference: {fileID: 44104387}
+      objectReference: {fileID: 8300000, guid: 52aefe49c8a26d841a41aa459a0f9995, type: 3}
     - target: {fileID: 7764721311691827497, guid: 7efed3281286e9d4d88775aa9816869c, type: 3}
       propertyPath: ActionText
       value: 
@@ -2869,6 +2868,10 @@ PrefabInstance:
     - target: {fileID: 7234309157814266272, guid: 71d50ca69424dc44eb6d0dbec0377bf2, type: 3}
       propertyPath: m_Name
       value: washingmachine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7234309157814266272, guid: 71d50ca69424dc44eb6d0dbec0377bf2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71d50ca69424dc44eb6d0dbec0377bf2, type: 3}

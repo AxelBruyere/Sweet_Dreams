@@ -15,7 +15,15 @@ public class DoorCell : MonoBehaviour
     public GameObject ActionText;
     public GameObject theDoor;
     //door noise
-    public AudioSource DoorSound;
+    public AudioClip DoorSound;
+    private float _duration;
+    private AudioSource audiosource;
+
+    void Awake(){
+        audiosource = GetComponent<AudioSource>();
+        audiosource.clip = DoorSound;
+        _duration = DoorSound.length;
+    }
 
     // Update is called once per frame
     void Update()
@@ -30,21 +38,22 @@ public class DoorCell : MonoBehaviour
         
         if(theDistance <= 3){
             //show text and button
+            //DoorSound.Play();
             ActionDisplay.SetActive(true);
             ActionText.SetActive(true);
+            //get the action key
+            if(Input.GetButtonDown("Action")){
+                //DoorSound.Play();
+                audiosource.Play();
+                Wait();
+                //onInteract.Invoke();
+                
+            }
         }else{
             //hide text and button
             //Debug.Log("exitdistance");
             ActionDisplay.SetActive(false);
             ActionText.SetActive(false);
-        }
-
-        //get the action key
-        if(Input.GetButtonDown("Action")){
-            if(theDistance <= 3){
-                DoorSound.Play();
-                onInteract.Invoke();
-            }
         }
     }
     
@@ -54,5 +63,12 @@ public class DoorCell : MonoBehaviour
         //hide text and button
         ActionDisplay.SetActive(false);
         ActionText.SetActive(false);
+    }
+
+    IEnumerator Wait()
+    {
+        Debug.Log(_duration);
+        yield return new WaitForSeconds(_duration);
+        
     }
 }
