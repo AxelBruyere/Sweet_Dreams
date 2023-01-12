@@ -27,6 +27,7 @@ public class Hide : MonoBehaviour
     public GameObject theHidingPlace;
     public bool isFlashLightOn;
     public GameObject flashlight;
+    public GameObject flashlightHidden;
     public GameObject character;
 
     void Start()
@@ -89,6 +90,10 @@ public class Hide : MonoBehaviour
 
                     //flashlight.SetActive(false);
                     //isFlashLightOn = false;
+                    if (isFlashLightOn){
+                        flashlightHidden.SetActive(true);
+                    }
+
 
                     justHide = true;
                     isHidingWardrobe = true;

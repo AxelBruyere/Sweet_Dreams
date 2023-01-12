@@ -70,7 +70,7 @@ public class TimeEvents : MonoBehaviour
                 animNotHidden.enabled = false; // Disables animation
                 mainCamera.GetComponent<LookWithMouse>().enabled = false; //Disables camera movements
                 transform.GetComponent<PlayerMovement>().enabled = false; //Disables character movements
-                mainCamera.transform.Rotate(-30,0,0); //Rotates the camera in order to see the monster
+                mainCamera.transform.rotation = Quaternion.Euler(-30.0f,0.0f,0.0f); //Rotates the camera in order to see the monster
                 yield return new WaitForSeconds(0.4f); //Waits a few frames
                 flashlightNotHidden.GetComponent<Light>().intensity = 100.0f; //Makes the light turns back on
             }

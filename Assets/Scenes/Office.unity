@@ -2740,6 +2740,10 @@ PrefabInstance:
       propertyPath: leaveDisplay
       value: 
       objectReference: {fileID: 1037885320}
+    - target: {fileID: 4758444328322264136, guid: 1fdb6bb9dfaac164fafbd7a06bc336b4, type: 3}
+      propertyPath: flashlightHidden
+      value: 
+      objectReference: {fileID: 632461185}
     - target: {fileID: 4758444328322264139, guid: 1fdb6bb9dfaac164fafbd7a06bc336b4, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.2065
