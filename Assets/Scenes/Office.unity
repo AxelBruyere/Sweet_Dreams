@@ -609,6 +609,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4996075005658483855, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
   m_PrefabInstance: {fileID: 1602336751}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &259640225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259640224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80f1b5daebc065a42b877d8da7da502f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraHidden: {fileID: 532947391}
+  flashlightHidden: {fileID: 632461185}
+  timeEvent: {fileID: 259640226}
 --- !u!114 &259640226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1118,20 +1133,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 80328323824601636, guid: 1fdb6bb9dfaac164fafbd7a06bc336b4, type: 3}
   m_PrefabInstance: {fileID: 4758444328703044582}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &632461189
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 632461185}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80f1b5daebc065a42b877d8da7da502f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cameraHidden: {fileID: 532947391}
-  PlayerControllerFPS: {fileID: 259640224}
 --- !u!95 &632461190
 Animator:
   serializedVersion: 3
