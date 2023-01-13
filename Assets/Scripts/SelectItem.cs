@@ -33,8 +33,8 @@ public class SelectItem : MonoBehaviour
         {
             if (slotName == "Monkey") //&& scene = Attic
             {
-                Debug.Log(plush.transform.GetComponent<MeshRenderer>().enabled);
-                plush.transform.GetComponent<MeshRenderer>().enabled=true;
+                //Debug.Log(plush.transform.GetComponent<MeshRenderer>().enabled);
+                //plush.transform.GetComponent<MeshRenderer>().enabled=true;
                 
                 inventory.Remove(plush.GetComponent<ItemControler>().Item);
                 InventoryManager.haveMonkey = false;
