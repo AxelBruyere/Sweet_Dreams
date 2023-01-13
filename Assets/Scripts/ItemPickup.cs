@@ -16,7 +16,7 @@ public class ItemPickup : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         inventory = player.transform.Find("InventoryManager").GetComponent<InventoryManager>();
         PlushScene = GameObject.FindWithTag("Plush");
-        Debug.Log(PlushScene.name);
+        //Debug.Log(PlushScene.name);
         
         if (PlushScene.name == "Monkey" && InventoryManager.haveMonkey == true)
         {
@@ -49,6 +49,7 @@ public class ItemPickup : MonoBehaviour
 
         if (PlushScene.name == "Alligator" && InventoryManager.haveAlligator == true)
         {
+            Debug.Log("ALLIGATORITEMPICKUP");
             foreach (Transform child in gameObject.transform)
                 {
                     child.gameObject.SetActive(false);

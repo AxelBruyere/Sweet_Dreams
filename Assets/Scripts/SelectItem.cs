@@ -58,8 +58,9 @@ public class SelectItem : MonoBehaviour
             InventoryManager.haveDinosaur = false;
         }
         
-        else if (slotName == "Alligator" && sceneName == "LivingRoomAndKitchen")
+        else if (slotName == "Alligator" && sceneName == "Corridor")
         {
+            Debug.Log("ALLIGATORSELECTITEM");
             foreach (Transform child in plush.transform)
                 {
                     child.gameObject.SetActive(true);
