@@ -6,6 +6,18 @@ using UnityEngine.SceneManagement;
 public class DefeatMenu : MonoBehaviour
 {
     
+    public GameObject Player;
+
+
+    private void Awake(){
+        Player = GameObject.FindWithTag("Player");
+        if (Player != null)
+            Destroy(Player);
+        //lock the cursor in the game area
+        Cursor.lockState = CursorLockMode.None;
+        //hide the cursor
+        Cursor.visible = true;
+    }
 
     //function when button Play is pressed
     public void backToMainMenu(){

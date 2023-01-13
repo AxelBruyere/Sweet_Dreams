@@ -2,6 +2,7 @@ using System.Timers;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 
@@ -18,14 +19,22 @@ public class TimeEvents : MonoBehaviour
     public GameObject flashlightNotHidden;
     public Animator animNotHidden;
 
+    public AudioSource Screamer;
+
     public bool monsterHere = false;
     
-
+    private bool dead = false;
     
     void Start(){ 
         StartCoroutine(monsterAppearance(5,5,5));
         animHidden = flashlightHidden.GetComponent<Animator>();
         animNotHidden = flashlightNotHidden.GetComponent<Animator>();
+    }
+
+    private void Update(){
+        if(dead && !Screamer.isPlaying){
+            SceneManager.LoadScene(7);
+        }
     }
 
 
@@ -44,7 +53,7 @@ public class TimeEvents : MonoBehaviour
 
             /*If you're hidden with the light on when the monster arrives */
             if (hidingCamera.enabled && flashlightHidden.activeSelf){
-                flashlightHidden.GetComponent<FlashlightHidden>().enabled = false;//Disable flashlight controls
+                GetComponent<FlashlightHidden>().enabled = false;//Disable flashlight controls
                 animHidden.enabled = true; //Triggers blinking light animation
                 while (animHidden.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0){
                     yield return new WaitForSeconds(0.1f); //Waits for animation end
@@ -56,8 +65,12 @@ public class TimeEvents : MonoBehaviour
                 //////////////////////////////////////////////hidingCamera.GetComponent<LookWithMouse>().enabled = false; //Disables camera movements
                 /////////////////////////////////////////////
                 hidingCamera.transform.eulerAngles = new Vector3(0.0f,0.0f,0.0f);
-                yield return new WaitForSeconds(0.4f); //Waits a few frames
+                yield return new WaitForSeconds(1.0f); //Waits a few frames
                 flashlightHidden.GetComponent<Light>().intensity = 100.0f; //Makes the light turns back on 
+                Screamer.Play();
+                dead = true;
+                GetComponent<FlashlightHidden>().enabled = false;
+                
 
             }
 
@@ -73,8 +86,11 @@ public class TimeEvents : MonoBehaviour
                 mainCamera.GetComponent<LookWithMouse>().enabled = false; //Disables camera movements
                 transform.GetComponent<PlayerMovement>().enabled = false; //Disables character movements
                 mainCamera.transform.eulerAngles = new Vector3(-30.0f,mainCamera.transform.eulerAngles.y,mainCamera.transform.eulerAngles.z); //Rotates the camera in order to see the monster
-                yield return new WaitForSeconds(0.4f); //Waits a few frames
+                yield return new WaitForSeconds(1.0f); //Waits a few frames
                 flashlightNotHidden.GetComponent<Light>().intensity = 100.0f; //Makes the light turns back on
+                Screamer.Play();
+                dead = true;
+                GetComponent<FlashlightHidden>().enabled = false;
             }
 
 
@@ -87,6 +103,9 @@ public class TimeEvents : MonoBehaviour
                 monsterNotHidden.SetActive(true); //Makes the monster appears
                 mainCamera.transform.eulerAngles = new Vector3(-30.0f,mainCamera.transform.eulerAngles.y,mainCamera.transform.eulerAngles.z); //Rotates the camera in order to see the monster
                 flashlightNotHidden.SetActive(true);//Active the flashlight
+                Screamer.Play();
+                dead = true;
+                GetComponent<FlashlightHidden>().enabled = false;
             }
 
 

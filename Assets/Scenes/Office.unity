@@ -644,7 +644,13 @@ MonoBehaviour:
   monsterNotHidden: {fileID: 416342432}
   flashlightNotHidden: {fileID: 653304360}
   animNotHidden: {fileID: 0}
+  Screamer: {fileID: 259640233}
   monsterHere: 0
+--- !u!82 &259640233 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3174548137793793269, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
+  m_PrefabInstance: {fileID: 1602336751}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &283861702
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2098,6 +2104,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 921583315238759786, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
       propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3174548137793793269, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3174548137793793269, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
+      propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3663212071716149691, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
