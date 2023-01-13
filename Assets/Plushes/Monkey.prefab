@@ -55,6 +55,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemPicked: {fileID: 11400000, guid: 18325c79244811547b06367781f175e2, type: 2}
+  inventory: {fileID: 0}
+  player: {fileID: 0}
+  PlushScene: {fileID: 0}
+  MeshPlush: 0
 --- !u!1001 &185596949641296792
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -125,6 +129,10 @@ PrefabInstance:
     - target: {fileID: 4808575116110212, guid: d323fc18d7f7cbb4d971d8250d723165, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 23119816653784782, guid: d323fc18d7f7cbb4d971d8250d723165, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 23119816653784782, guid: d323fc18d7f7cbb4d971d8250d723165, type: 3}
       propertyPath: m_Materials.Array.data[0]

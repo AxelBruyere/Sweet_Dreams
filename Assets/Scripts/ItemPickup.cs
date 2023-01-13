@@ -17,6 +17,7 @@ public class ItemPickup : MonoBehaviour
         inventory = player.transform.Find("InventoryManager").GetComponent<InventoryManager>();
         PlushScene = GameObject.FindWithTag("Plush");
         Debug.Log(PlushScene.name);
+        
         if (PlushScene.name == "Monkey" && InventoryManager.haveMonkey == true)
         {
             gameObject.transform.GetComponent<MeshRenderer>().enabled = false;
@@ -24,22 +25,34 @@ public class ItemPickup : MonoBehaviour
 
         if (PlushScene.name == "Rabbit" && InventoryManager.haveRabbit == true)
         {
-            gameObject.transform.GetComponent<MeshRenderer>().enabled = false;
+            foreach (Transform child in gameObject.transform)
+                {
+                    child.gameObject.SetActive(false);
+                }
         }
 
         if (PlushScene.name == "Elephant" && InventoryManager.haveElephant == true)
         {
-            gameObject.transform.GetComponent<MeshRenderer>().enabled = false;
+            foreach (Transform child in gameObject.transform)
+                {
+                    child.gameObject.SetActive(false);
+                }
         }
 
         if (PlushScene.name == "Dinossaur" && InventoryManager.haveDinosaur == true)
         {
-            gameObject.transform.GetComponent<MeshRenderer>().enabled = false;
+            foreach (Transform child in gameObject.transform)
+                {
+                    child.gameObject.SetActive(false);
+                }
         }
 
         if (PlushScene.name == "Alligator" && InventoryManager.haveAlligator == true)
         {
-            gameObject.transform.GetComponent<MeshRenderer>().enabled = false;
+            foreach (Transform child in gameObject.transform)
+                {
+                    child.gameObject.SetActive(false);
+                }
         }
     }
 
@@ -54,33 +67,48 @@ public class ItemPickup : MonoBehaviour
         {
             inventory.Add(itemPicked);
             InventoryManager.haveMonkey = true;
+            gameObject.transform.GetComponent<MeshRenderer>().enabled = false;
         }
 
         if (itemPicked.itemName == "Rabbit" && InventoryManager.haveRabbit == false)
         {
             inventory.Add(itemPicked);
             InventoryManager.haveRabbit = true;
+            foreach (Transform child in PlushScene.transform)
+                {
+                    child.gameObject.SetActive(false);
+                }
         }
 
         if (itemPicked.itemName == "Elephant" && InventoryManager.haveElephant == false)
         {
             inventory.Add(itemPicked);
             InventoryManager.haveElephant = true;
+            foreach (Transform child in PlushScene.transform)
+                {
+                    child.gameObject.SetActive(false);
+                }
         }
 
         if (itemPicked.itemName == "Dinossaur" && InventoryManager.haveDinosaur == false)
         {
             inventory.Add(itemPicked);
             InventoryManager.haveDinosaur = true;
+            foreach (Transform child in PlushScene.transform)
+                {
+                    child.gameObject.SetActive(false);
+                }
         }
 
         if (itemPicked.itemName == "Alligator" && InventoryManager.haveAlligator == false)
         {
             inventory.Add(itemPicked);
             InventoryManager.haveAlligator = true;
+            foreach (Transform child in PlushScene.transform)
+                {
+                    child.gameObject.SetActive(false);
+                }
         }
-        
-        gameObject.transform.GetComponent<MeshRenderer>().enabled = false;
     }
 
     private void OnMouseDown()
