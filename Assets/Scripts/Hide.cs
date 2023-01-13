@@ -6,9 +6,21 @@ using UnityEngine.Events;
 
 public class Hide : MonoBehaviour
 {  
+    //GameObjects retrieve auto
+    //Player
+    public GameObject player;
+    //Flashlight
+    public GameObject flashlight;
+
     //camera control
     public Camera mainCamera;
     public Camera hidingCamera;
+
+    //audio control
+    public AudioListener mainAudio;
+    public AudioListener hidingAudio;
+    public AudioSource mainMusic;
+    public AudioSource hidingMusic;
 
     //unity event
     public UnityEvent onInteract;
@@ -26,15 +38,28 @@ public class Hide : MonoBehaviour
     public GameObject leaveText;
     public GameObject theHidingPlace;
     public bool isFlashLightOn;
-    public GameObject flashlight;
+    
     public GameObject flashlightHidden;
-    public GameObject character;
-
+    
+    //public GameObject test;
+    
     void Start()
     {
+        player = GameObject.FindWithTag("Player");
+        mainCamera = Camera.main;
+        mainAudio = player.transform.Find("Character").gameObject.transform.Find("Main Camera").gameObject.GetComponent<AudioListener>();
+        mainMusic = player.transform.Find("Character").gameObject.transform.Find("Main Camera").gameObject.GetComponent<AudioSource>();
+        //Debug.Log(player.transform.Find("Character").gameObject.transform.Find("Main Camera").gameObject.transform.Find("Flashlight").gameObject);
+        flashlight = player.transform.Find("Character").gameObject.transform.Find("Main Camera").gameObject.transform.Find("Flashlight").gameObject;
+        //test = player.Find("Character");
         //set the active camera
         mainCamera.enabled = true;
+        mainAudio.enabled = true;
+        mainMusic.Play();
         hidingCamera.enabled = false;
+        hidingAudio.enabled = false;
+        hidingMusic.Pause();
+
     }
 
 
@@ -50,11 +75,15 @@ public class Hide : MonoBehaviour
             if(Input.GetButtonDown("Action")){
                 //Enable player
                 //GameObject.Find("PlayerControllerFPS Variant 1").transform.GetChild(0).SetActive(true);                
-                character.transform.GetChild(0).gameObject.SetActive(true);
+                player.transform.GetChild(0).gameObject.SetActive(true);
 
                 //Switch cameras
                 mainCamera.enabled = true;
+                mainAudio.enabled = true;
+                mainMusic.Play();
                 hidingCamera.enabled = false;
+                hidingAudio.enabled = false;
+                hidingMusic.Pause();
 
                 isHiding = false;
                 justHide = false;
@@ -82,12 +111,15 @@ public class Hide : MonoBehaviour
                 if(Input.GetButtonDown("Action")){
                     //Disable player
                     //GameObject.Find("PlayerControllerFPS Variant 1").transform.GetChild(0).SetActive(false);
-                    character.transform.GetChild(0).gameObject.SetActive(false);
+                    player.transform.GetChild(0).gameObject.SetActive(false);
 
                     //Switch cameras
                     mainCamera.enabled = false;
+                    mainAudio.enabled = false;
+                    mainMusic.Pause();
                     hidingCamera.enabled = true;
-
+                    hidingAudio.enabled = true;
+                    hidingMusic.Play();
                     //flashlight.SetActive(false);
                     //isFlashLightOn = false;
                     if (isFlashLightOn){
