@@ -8,7 +8,7 @@ public class SelectItem : MonoBehaviour
 {
     private InventoryManager inventory;
     private GameObject player;
-    private GameObject plush;
+    [SerializeField] private GameObject plush;
     private GameObject[] listSlots;
 
     [SerializeField] private GameObject slot;
@@ -17,8 +17,11 @@ public class SelectItem : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player");
         inventory = player.transform.Find("InventoryManager").GetComponent<InventoryManager>();
-        plush = inventory.PlushScene;
+    }
 
+    private void Update()
+    {
+        plush = inventory.PlushScene;
     }
 
     public void Selection()
@@ -34,7 +37,7 @@ public class SelectItem : MonoBehaviour
             if (slotName == "Monkey") //&& scene = Attic
             {
                 //Debug.Log(plush.transform.GetComponent<MeshRenderer>().enabled);
-                //plush.transform.GetComponent<MeshRenderer>().enabled=true;
+                plush.transform.GetComponent<MeshRenderer>().enabled=true;
                 
                 inventory.Remove(plush.GetComponent<ItemControler>().Item);
                 InventoryManager.haveMonkey = false;
