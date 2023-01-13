@@ -23,31 +23,36 @@ public class InventoryManager : MonoBehaviour
         Instance = this;
 
         if(PlushScene != null){
-            if (haveDinosaur && PlushScene.name == "Dinossaur"){
-
-                //Debug.Log("ca marche");
-                PlushScene.SetActive(false);
+            if (haveDinosaur && PlushScene.name == "Dinossaur")
+            {
+                foreach (Transform child in PlushScene.transform)
+                {
+                    child.gameObject.SetActive(false);
+                }
             }
-            if (haveRabbit && PlushScene.name == "Rabbit"){
-
-                //Debug.Log("ca marche");
-                PlushScene.SetActive(false);
+            if (haveRabbit && PlushScene.name == "Rabbit")
+            {
+                foreach (Transform child in PlushScene.transform)
+                {
+                    child.gameObject.SetActive(false);
+                }
             }
-            if (haveElephant && PlushScene.name == "Elephant"){
-
-                //Debug.Log("ca marche");
-                PlushScene.SetActive(false);
+            if (haveElephant && PlushScene.name == "Elephant")
+            {
+                foreach (Transform child in PlushScene.transform)
+                {
+                    child.gameObject.SetActive(false);
+                }
             }
-
-            if (haveAlligator && PlushScene.name == "Alligator"){
-
-                //Debug.Log("ca marche");
-                PlushScene.SetActive(false);
+            if (haveAlligator && PlushScene.name == "Alligator")
+            {
+                foreach (Transform child in PlushScene.transform)
+                {
+                    child.gameObject.SetActive(false);
+                }
             }
-
-            if (haveMonkey && PlushScene.name == "Monkey"){
-
-                //Debug.Log("ca marche");
+            if (haveMonkey && PlushScene.name == "Monkey")
+            {
                 PlushScene.transform.GetComponent<MeshRenderer>().enabled=false;
             }
         }

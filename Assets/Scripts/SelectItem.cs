@@ -6,19 +6,21 @@ using UnityEngine.UI;
 
 public class SelectItem : MonoBehaviour
 {
+    [SerializeField] private GameObject plush;
+    [SerializeField] private GameObject slot;
+    private GameObject[] listSlots;
     private InventoryManager inventory;
     private GameObject player;
-    private GameObject plush;
-    private GameObject[] listSlots;
-
-    [SerializeField] private GameObject slot;
 
     public void Awake()
     {
         player = GameObject.FindWithTag("Player");
         inventory = player.transform.Find("InventoryManager").GetComponent<InventoryManager>();
-        plush = inventory.PlushScene;
+    }
 
+    private void Update()
+    {
+        plush = inventory.PlushScene;
     }
 
     public void Selection()
@@ -29,29 +31,53 @@ public class SelectItem : MonoBehaviour
         string sceneName = currentScene.name;
         string slotName = slot.transform.Find("Text").GetComponent<Text>().text;
 
-        if (sceneName == "Attic")
+        if (slotName == "Monkey" && sceneName == "Attic")
         {
-            if (slotName == "Monkey") //&& scene = Attic
-            {
-                //Debug.Log(plush.transform.GetComponent<MeshRenderer>().enabled);
-                //plush.transform.GetComponent<MeshRenderer>().enabled=true;
-                
-                inventory.Remove(plush.GetComponent<ItemControler>().Item);
-                InventoryManager.haveMonkey = false;
-
-            }
-                
-
-            //else if ((plush = rabbit) ||(plush = alligator)) && scene = LivingRoomAndKitchen
-                //rabbit.SetActive(true) || alligator.SetActive(true)
-
-            //else if plush = dinossaur && scene = office
-                //Monkey.SetActive(true)
-
-            //else if plush = elephant && scene = Bathroom
-                //Monkey.SetActive(true)
-            //inventory.Remove(itemPut)
+            plush.transform.GetComponent<MeshRenderer>().enabled=true;
+            inventory.Remove(plush.GetComponent<ItemControler>().Item);
+            InventoryManager.haveMonkey = false;
         }
+
+        else if (slotName == "Elephant" && sceneName == "Bathroom")
+        {
+            foreach (Transform child in plush.transform)
+                {
+                    child.gameObject.SetActive(true);
+                }
+            inventory.Remove(plush.GetComponent<ItemControler>().Item);
+            InventoryManager.haveElephant = false;
+        }
+
+        else if (slotName == "Dinossaur" && sceneName == "Office")
+        {
+            foreach (Transform child in plush.transform)
+                {
+                    child.gameObject.SetActive(true);
+                }
+            inventory.Remove(plush.GetComponent<ItemControler>().Item);
+            InventoryManager.haveDinosaur = false;
+        }
+        
+        else if (slotName == "Alligator" && sceneName == "LivingRoomAndKitchen")
+        {
+            foreach (Transform child in plush.transform)
+                {
+                    child.gameObject.SetActive(true);
+                }
+            inventory.Remove(plush.GetComponent<ItemControler>().Item);
+            InventoryManager.haveAlligator = false;
+        }
+
+        else if (slotName == "Rabbit" && sceneName == "LivingRoomAndKitchen")
+        {
+            foreach (Transform child in plush.transform)
+                {
+                    child.gameObject.SetActive(true);
+                }
+            inventory.Remove(plush.GetComponent<ItemControler>().Item);
+            InventoryManager.haveRabbit = false;
+        }
+
         else{
              Debug.Log("You can't");
         }
