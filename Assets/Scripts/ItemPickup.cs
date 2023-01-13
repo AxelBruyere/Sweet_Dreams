@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ItemPickup : MonoBehaviour
 {  
@@ -13,12 +14,10 @@ public class ItemPickup : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player");
         inventory = player.transform.Find("InventoryManager").GetComponent<InventoryManager>();
-        //Debug.Log(inventory);
     }
 
     void Pickup()
     {
-        //Debug.Log(itemPicked);
         inventory.Add(itemPicked);
         if (itemPicked.itemName == "Monkey")
         {

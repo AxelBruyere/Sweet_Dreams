@@ -78,15 +78,18 @@ public class InventoryManager : MonoBehaviour
     public void RefreshUI(){
         for(int i = 0; i<slots.Length; i++)
         {
+            Debug.Log(slots[i]);
             try
             {
                 slots[i].transform.GetChild(0).GetComponent<Image>().enabled = true;
                 slots[i].transform.GetChild(0).GetComponent<Image>().sprite = Items[i].itemIcon;
+                slots[i].transform.GetChild(0).GetComponent<Text>().text = Items[i].itemName;
             }
             catch
             {
                 slots[i].transform.GetChild(0).GetComponent<Image>().sprite = null;
                 slots[i].transform.GetChild(0).GetComponent<Image>().enabled = false;
+                slots[i].transform.GetChild(0).GetComponent<Text>().text = "";
 
             }
         }

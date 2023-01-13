@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15012c8d272f22b4bbfaf78907c36a5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exitName: LivingRoomAndKitchen
+  exitName: Attic
 --- !u!114 &256209993237265579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,7 +128,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 256209993237265578}
         m_TargetAssemblyTypeName: SceneExit, Assembly-CSharp
-        m_MethodName: ButtonMoveScene
+        m_MethodName: ButonMoveScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
