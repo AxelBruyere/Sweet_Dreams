@@ -2,20 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SelectItem : MonoBehaviour
 {
-    public Item itemPut;
-    public InventoryManager inventory;
-    public GameObject player;
-    private GameObject PlushScene;
-    private GameObject listSlots;
+    private InventoryManager inventory;
+    private GameObject player;
+    private GameObject plush;
+    private GameObject[] listSlots;
+
+    [SerializeField] private GameObject slot;
 
     public void Awake()
     {
         player = GameObject.FindWithTag("Player");
         inventory = player.transform.Find("InventoryManager").GetComponent<InventoryManager>();
-        listSlots = player.transform.Find("CanvasInventory2").gameObject.transform.Find("InventoryPanel").gameObject.transform.Find("Slots").gameObject;
+        plush = inventory.PlushScene;
+
     }
 
     public void Selection()
@@ -24,16 +27,20 @@ public class SelectItem : MonoBehaviour
         Scene currentScene = SceneManager.GetActiveScene ();
         // Retrieve the name of the scene
         string sceneName = currentScene.name;
+        string slotName = slot.transform.Find("Text").GetComponent<Text>().text;
 
-        //listSlots = inventory.GetComponent<Slots>();
-
-        Debug.Log(listSlots);
-
-        if (sceneName == "Childroom")
+        if (sceneName == "Attic")
         {
-            Debug.Log("You can");
-            //if plush = monkey && scene = Attic
-                //Monkey.SetActive(true)
+            if (slotName == "Monkey") //&& scene = Attic
+            {
+                Debug.Log(plush.transform.GetComponent<MeshRenderer>().enabled);
+                plush.transform.GetComponent<MeshRenderer>().enabled=true;
+                
+                inventory.Remove(plush.GetComponent<ItemControler>().Item);
+                InventoryManager.haveMonkey = false;
+
+            }
+                
 
             //else if ((plush = rabbit) ||(plush = alligator)) && scene = LivingRoomAndKitchen
                 //rabbit.SetActive(true) || alligator.SetActive(true)

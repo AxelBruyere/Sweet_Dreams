@@ -6,30 +6,21 @@ using System;
 
 public class InventoryManager : MonoBehaviour
 {
-    public static InventoryManager Instance;
-
     [SerializeField] private GameObject slotHolder;
+    [SerializeField] private Item itemToAdd;
     public List<Item> Items = new List<Item>();
-
+    private GameObject[] slots;
+    public GameObject PlushScene;
+    public static InventoryManager Instance;
     public static bool haveMonkey = false;
     public static bool haveRabbit = false;
     public static bool haveDinosaur = false;
     public static bool haveAlligator = false;
     public static bool haveElephant = false;
 
-    [SerializeField] private Item itemToAdd;
-
-    private GameObject[] slots;
-
-    /*public Transform ItemContent;
-    public GameObject InventoryItem;*/
-    private GameObject PlushScene;
-
     public void Awake()
     {
         Instance = this;
-        PlushScene = GameObject.FindWithTag("Plush");
-        //Debug.Log(PlushScene);
 
         if(PlushScene != null){
             if (haveDinosaur && PlushScene.name == "Dinossaur"){
@@ -57,7 +48,7 @@ public class InventoryManager : MonoBehaviour
             if (haveMonkey && PlushScene.name == "Monkey"){
 
                 //Debug.Log("ca marche");
-                PlushScene.SetActive(false);
+                PlushScene.transform.GetComponent<MeshRenderer>().enabled=false;
             }
         }
     }
@@ -75,21 +66,25 @@ public class InventoryManager : MonoBehaviour
         Add(itemToAdd);
     }
 
+    private void Update()
+    {
+        PlushScene = GameObject.FindWithTag("Plush");
+    }
+
     public void RefreshUI(){
         for(int i = 0; i<slots.Length; i++)
         {
-            Debug.Log(slots[i]);
             try
             {
                 slots[i].transform.GetChild(0).GetComponent<Image>().enabled = true;
                 slots[i].transform.GetChild(0).GetComponent<Image>().sprite = Items[i].itemIcon;
-                slots[i].transform.GetChild(0).GetComponent<Text>().text = Items[i].itemName;
+                slots[i].transform.GetChild(1).GetComponent<Text>().text = Items[i].itemName;
             }
             catch
             {
                 slots[i].transform.GetChild(0).GetComponent<Image>().sprite = null;
                 slots[i].transform.GetChild(0).GetComponent<Image>().enabled = false;
-                slots[i].transform.GetChild(0).GetComponent<Text>().text = "";
+                slots[i].transform.GetChild(1).GetComponent<Text>().text = " ";
 
             }
         }
@@ -97,7 +92,6 @@ public class InventoryManager : MonoBehaviour
 
     public void Add(Item item)
     {
-        //Debug.Log(item);
         Items.Add(item);
         RefreshUI();
     }
@@ -107,38 +101,4 @@ public class InventoryManager : MonoBehaviour
         Items.Remove(item);
         RefreshUI();
     }
-    
-
-   /*public void ListItems()
-    {
-        
-       /* //Clean content before open.
-        if(ItemContent != null)
-        {
-            foreach(Transform item in ItemContent)
-            {    
-                //Debug.Log(item.name);
-                Destroy(item.gameObject);
-                //item.gameObject.SetActive(false);
-            
-                
-            }
-        }
-       
-      
-
-        foreach(var item in Items)
-        {
-            Debug.Log(item);
-            GameObject obj = Instantiate(InventoryItem, ItemContent);
-            var itemName = obj.transform.Find("ItemName").GetComponent<Text>();
-            var itemIcon = obj.transform.Find("ItemIcon").GetComponent<Image>();
-
-            itemName.text = item.itemName;
-            itemIcon.sprite = item.itemIcon;
-
-            itemName.text = item.itemName;
-            itemIcon.sprite = item.itemIcon;
-        }
-    }  */
 }
