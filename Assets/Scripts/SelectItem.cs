@@ -31,7 +31,40 @@ public class SelectItem : MonoBehaviour
         string sceneName = currentScene.name;
         string slotName = slot.transform.Find("Text").GetComponent<Text>().text;
 
-        if (slotName == "Monkey" && sceneName == "Attic")
+        if (sceneName == "ChildRoom")
+        {
+            if(slotName == "Monkey")
+            {
+                plush.transform.GetComponent<MeshRenderer>().enabled=true;
+                inventory.Remove(plush.GetComponent<ItemControler>().Item);
+                InventoryManager.haveMonkey = false;
+            }
+            else
+            {
+                foreach (Transform child in plush.transform)
+                {
+                    child.gameObject.SetActive(true);
+                }
+                inventory.Remove(plush.GetComponent<ItemControler>().Item);
+                if (slotName == "Alligator")
+                {
+                    InventoryManager.haveAlligator = false;
+                }
+                else if (slotName == "Rabbit")
+                {
+                    InventoryManager.haveRabbit = false;
+                }
+                else if (slotName == "Dinossaur")
+                {
+                    InventoryManager.haveDinosaur = false;
+                }
+                else if (slotName == "Elephant")
+                {
+                    InventoryManager.haveElephant = false;
+                }   
+            }
+        }
+        else if (slotName == "Monkey" && sceneName == "Attic")
         {
             plush.transform.GetComponent<MeshRenderer>().enabled=true;
             inventory.Remove(plush.GetComponent<ItemControler>().Item);
@@ -60,7 +93,6 @@ public class SelectItem : MonoBehaviour
         
         else if (slotName == "Alligator" && sceneName == "Corridor")
         {
-            Debug.Log("ALLIGATORSELECTITEM");
             foreach (Transform child in plush.transform)
                 {
                     child.gameObject.SetActive(true);

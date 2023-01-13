@@ -21,7 +21,6 @@ public class InventoryManager : MonoBehaviour
     public void Awake()
     {
         Instance = this;
-
         if(PlushScene != null){
             if (haveDinosaur && PlushScene.name == "Dinossaur")
             {
@@ -46,7 +45,6 @@ public class InventoryManager : MonoBehaviour
             }
             if (haveAlligator && PlushScene.name == "Alligator")
             {
-                Debug.Log("ALLIGATORSINVENTORYMANAGER");
                 foreach (Transform child in PlushScene.transform)
                 {
                     child.gameObject.SetActive(false);

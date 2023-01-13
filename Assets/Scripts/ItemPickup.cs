@@ -49,7 +49,6 @@ public class ItemPickup : MonoBehaviour
 
         if (PlushScene.name == "Alligator" && InventoryManager.haveAlligator == true)
         {
-            Debug.Log("ALLIGATORITEMPICKUP");
             foreach (Transform child in gameObject.transform)
                 {
                     child.gameObject.SetActive(false);
@@ -59,7 +58,22 @@ public class ItemPickup : MonoBehaviour
 
     private void Update()
     {
+        // Create a temporary reference to the current scene
+        Scene currentScene = SceneManager.GetActiveScene ();
+        // Retrieve the name of the scene
+        string sceneName = currentScene.name;
         MeshPlush = PlushScene.transform.GetComponent<MeshRenderer>().enabled;
+        if (sceneName == "ChildRoom"){
+            if (PlushScene.name == "Monkey"){
+                gameObject.transform.GetComponent<MeshRenderer>().enabled = false;
+            }
+            else{
+                foreach (Transform child in PlushScene.transform)
+                {
+                    child.gameObject.SetActive(false);
+                }
+            } 
+        }
     }
 
     void Pickup()
@@ -68,7 +82,7 @@ public class ItemPickup : MonoBehaviour
         {
             inventory.Add(itemPicked);
             InventoryManager.haveMonkey = true;
-            gameObject.transform.GetComponent<MeshRenderer>().enabled = false;
+            
         }
 
         if (itemPicked.itemName == "Rabbit" && InventoryManager.haveRabbit == false)
