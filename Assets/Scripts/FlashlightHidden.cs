@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FlashlightHidden : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class FlashlightHidden : MonoBehaviour
     public Camera cameraHidden;
     public GameObject flashlightHidden;
     public TimeEvents timeEvent;
+
+    public AudioSource Screamer;
+    public bool dead;
 
     //turn off the flashlight in the beggining
     void Start()
@@ -20,13 +24,19 @@ public class FlashlightHidden : MonoBehaviour
     void Update()
     {   
         if (cameraHidden.enabled){
+            if(dead && !Screamer.isPlaying){
+                SceneManager.LoadScene(7);
+                GetComponent<FlashlightHidden>().enabled = false;
+            }
             if(Input.GetKeyDown(KeyCode.F)){
                 if(!flashlightActive){
                     //turn on the flashlight
                     flashlightHidden.SetActive(true);
                     flashlightActive = true;
                     if (timeEvent.monsterHere){ 
-                        Debug.Log("Perdu !");
+                        Screamer.Play();
+                        dead = true;
+                        GetComponent<TimeEvents>().enabled = false;
                     }
                     
 

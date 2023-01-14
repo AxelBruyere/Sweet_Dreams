@@ -629,6 +629,8 @@ MonoBehaviour:
   cameraHidden: {fileID: 532947391}
   flashlightHidden: {fileID: 632461185}
   timeEvent: {fileID: 259640226}
+  Screamer: {fileID: 259640233}
+  dead: 0
 --- !u!114 &259640226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -757,15 +759,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 498602, guid: 998cdba2ec3796d479946175320a9861, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.53607893
+      value: -1.75
       objectReference: {fileID: 0}
     - target: {fileID: 498602, guid: 998cdba2ec3796d479946175320a9861, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.6536988
+      value: -1.65
       objectReference: {fileID: 0}
     - target: {fileID: 498602, guid: 998cdba2ec3796d479946175320a9861, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.1629508
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 498602, guid: 998cdba2ec3796d479946175320a9861, type: 3}
       propertyPath: m_LocalRotation.w

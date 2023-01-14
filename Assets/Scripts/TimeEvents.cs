@@ -115,8 +115,10 @@ public class TimeEvents : MonoBehaviour
                 monsterHidden.SetActive(true); //Makes the monster appears in order to have it in front of the player in case he/she turns the light back on
                 monsterHere = true; //Useful to manage the case the players turns de light back on before the monster leaves
                 yield return new WaitForSeconds(timeBeforeLeaving); //Waits until the monster leaves
-                monsterHere = false; 
-                monsterHidden.SetActive(false); //Makes the monster disappears
+                if (!GetComponent<FlashlightHidden>().dead){
+                    monsterHere = false; 
+                    monsterHidden.SetActive(false); //Makes the monster disappears
+                    }
             }
 
 
