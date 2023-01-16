@@ -22,7 +22,7 @@ public class InventoryManager : MonoBehaviour
     {
         Instance = this;
         if(PlushScene != null){
-            if (haveDinosaur && PlushScene.name == "Dinossaur")
+            if (haveDinosaur && PlushScene.name == "Dinosaur")
             {
                 foreach (Transform child in PlushScene.transform)
                 {

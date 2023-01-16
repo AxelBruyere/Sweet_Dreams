@@ -20,7 +20,14 @@ public class SelectItem : MonoBehaviour
 
     private void Update()
     {
-        plush = inventory.PlushScene;
+        // Create a temporary reference to the current scene
+        Scene currentScene0 = SceneManager.GetActiveScene ();
+        // Retrieve the name of the scene
+        string sceneName0 = currentScene0.name;
+        if (sceneName0 != "ChildRoom")
+        {
+            plush = inventory.PlushScene;
+        } 
     }
 
     public void Selection()
@@ -30,89 +37,58 @@ public class SelectItem : MonoBehaviour
         // Retrieve the name of the scene
         string sceneName = currentScene.name;
         string slotName = slot.transform.Find("Text").GetComponent<Text>().text;
-
-        if (sceneName == "ChildRoom")
-        {
-            if(slotName == "Monkey")
+        Debug.Log(slotName);
+        if (InventoryManager.haveDinosaur==true && InventoryManager.haveRabbit==true && InventoryManager.haveElephant==true &&InventoryManager.haveAlligator==true && InventoryManager.haveMonkey==true)
+        {    
+            if (sceneName == "ChildRoom")
             {
-                plush.transform.GetComponent<MeshRenderer>().enabled=true;
-                inventory.Remove(plush.GetComponent<ItemControler>().Item);
-                InventoryManager.haveMonkey = false;
+                plush = GameObject.Find(slotName);
+                if (slotName == "Alligator")
+                {
+                    foreach (Transform child in plush.transform)
+                        {
+                            child.gameObject.SetActive(true);
+                        }
+                    inventory.Remove(plush.GetComponent<ItemControler>().Item);
+                }
+                else if (slotName == "Elephant" && (sceneName == "Bathroom"||sceneName == "ChildRoom"))
+                {
+                    foreach (Transform child in plush.transform)
+                        {
+                            child.gameObject.SetActive(true);
+                        }
+                    inventory.Remove(plush.GetComponent<ItemControler>().Item);
+                }
+                else if (slotName == "Rabbit" && (sceneName == "LivingRoomAndKitchen"||sceneName == "ChildRoom"))
+                {
+                    foreach (Transform child in plush.transform)
+                        {
+                            child.gameObject.SetActive(true);
+                        }
+                    inventory.Remove(plush.GetComponent<ItemControler>().Item);
+                }
+                else if (slotName == "Monkey" && (sceneName == "Attic"||sceneName == "ChildRoom"))
+                {
+                    plush.transform.GetComponent<MeshRenderer>().enabled=true;
+                    inventory.Remove(plush.GetComponent<ItemControler>().Item);
+                }
+                else if (slotName == "Dinosaur" && (sceneName == "Office"||sceneName == "ChildRoom"))
+                {
+                    foreach (Transform child in plush.transform)
+                        {
+                            child.gameObject.SetActive(true);
+                        }
+                    inventory.Remove(plush.GetComponent<ItemControler>().Item);
+                }
             }
             else
             {
-                foreach (Transform child in plush.transform)
-                {
-                    child.gameObject.SetActive(true);
-                }
-                inventory.Remove(plush.GetComponent<ItemControler>().Item);
-                if (slotName == "Alligator")
-                {
-                    InventoryManager.haveAlligator = false;
-                }
-                else if (slotName == "Rabbit")
-                {
-                    InventoryManager.haveRabbit = false;
-                }
-                else if (slotName == "Dinossaur")
-                {
-                    InventoryManager.haveDinosaur = false;
-                }
-                else if (slotName == "Elephant")
-                {
-                    InventoryManager.haveElephant = false;
-                }   
+                Debug.Log("You can put down the plushes only on the ChildRoom !");
             }
         }
-        else if (slotName == "Monkey" && sceneName == "Attic")
+        else 
         {
-            plush.transform.GetComponent<MeshRenderer>().enabled=true;
-            inventory.Remove(plush.GetComponent<ItemControler>().Item);
-            InventoryManager.haveMonkey = false;
-        }
-
-        else if (slotName == "Elephant" && sceneName == "Bathroom")
-        {
-            foreach (Transform child in plush.transform)
-                {
-                    child.gameObject.SetActive(true);
-                }
-            inventory.Remove(plush.GetComponent<ItemControler>().Item);
-            InventoryManager.haveElephant = false;
-        }
-
-        else if (slotName == "Dinossaur" && sceneName == "Office")
-        {
-            foreach (Transform child in plush.transform)
-                {
-                    child.gameObject.SetActive(true);
-                }
-            inventory.Remove(plush.GetComponent<ItemControler>().Item);
-            InventoryManager.haveDinosaur = false;
-        }
-        
-        else if (slotName == "Alligator" && sceneName == "Corridor")
-        {
-            foreach (Transform child in plush.transform)
-                {
-                    child.gameObject.SetActive(true);
-                }
-            inventory.Remove(plush.GetComponent<ItemControler>().Item);
-            InventoryManager.haveAlligator = false;
-        }
-
-        else if (slotName == "Rabbit" && sceneName == "LivingRoomAndKitchen")
-        {
-            foreach (Transform child in plush.transform)
-                {
-                    child.gameObject.SetActive(true);
-                }
-            inventory.Remove(plush.GetComponent<ItemControler>().Item);
-            InventoryManager.haveRabbit = false;
-        }
-
-        else{
-             Debug.Log("You can't");
+            Debug.Log("You don't have all the plushes !");
         }
     }
 }

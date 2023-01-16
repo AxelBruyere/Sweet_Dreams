@@ -15,9 +15,17 @@ public class ItemPickup : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player");
         inventory = player.transform.Find("InventoryManager").GetComponent<InventoryManager>();
-        PlushScene = GameObject.FindWithTag("Plush");
-        //Debug.Log(PlushScene.name);
-        
+
+        // Create a temporary reference to the current scene
+        Scene currentScene = SceneManager.GetActiveScene ();
+        // Retrieve the name of the scene
+        string sceneName = currentScene.name;
+
+        if (sceneName != "Childroom")
+        {
+            PlushScene = GameObject.FindWithTag("Plush");
+        }
+
         if (PlushScene.name == "Monkey" && InventoryManager.haveMonkey == true)
         {
             gameObject.transform.GetComponent<MeshRenderer>().enabled = false;
@@ -39,7 +47,7 @@ public class ItemPickup : MonoBehaviour
                 }
         }
 
-        if (PlushScene.name == "Dinossaur" && InventoryManager.haveDinosaur == true)
+        if (PlushScene.name == "Dinosaur" && InventoryManager.haveDinosaur == true)
         {
             foreach (Transform child in gameObject.transform)
                 {
@@ -58,71 +66,60 @@ public class ItemPickup : MonoBehaviour
 
     private void Update()
     {
-        // Create a temporary reference to the current scene
-        Scene currentScene = SceneManager.GetActiveScene ();
-        // Retrieve the name of the scene
-        string sceneName = currentScene.name;
         MeshPlush = PlushScene.transform.GetComponent<MeshRenderer>().enabled;
-        if (sceneName == "ChildRoom"){
-            if (PlushScene.name == "Monkey"){
-                gameObject.transform.GetComponent<MeshRenderer>().enabled = false;
-            }
-            else{
-                foreach (Transform child in PlushScene.transform)
-                {
-                    child.gameObject.SetActive(false);
-                }
-            } 
-        }
     }
 
     void Pickup()
     {
-        if (itemPicked.itemName == "Monkey" && InventoryManager.haveMonkey == false)
-        {
-            inventory.Add(itemPicked);
-            InventoryManager.haveMonkey = true;
-            
-        }
+        // Create a temporary reference to the current scene
+        Scene currentScene = SceneManager.GetActiveScene ();
+        // Retrieve the name of the scene
+        string sceneName = currentScene.name;
 
-        if (itemPicked.itemName == "Rabbit" && InventoryManager.haveRabbit == false)
+        if (sceneName != "ChildRoom")
         {
-            inventory.Add(itemPicked);
-            InventoryManager.haveRabbit = true;
-            foreach (Transform child in PlushScene.transform)
-                {
-                    child.gameObject.SetActive(false);
-                }
-        }
-
-        if (itemPicked.itemName == "Elephant" && InventoryManager.haveElephant == false)
-        {
-            inventory.Add(itemPicked);
-            InventoryManager.haveElephant = true;
-            foreach (Transform child in PlushScene.transform)
-                {
-                    child.gameObject.SetActive(false);
-                }
-        }
-
-        if (itemPicked.itemName == "Dinossaur" && InventoryManager.haveDinosaur == false)
-        {
-            inventory.Add(itemPicked);
-            InventoryManager.haveDinosaur = true;
-            foreach (Transform child in PlushScene.transform)
-                {
-                    child.gameObject.SetActive(false);
-                }
-        }
-
-        if (itemPicked.itemName == "Alligator" && InventoryManager.haveAlligator == false)
-        {
-            inventory.Add(itemPicked);
-            InventoryManager.haveAlligator = true;
-            foreach (Transform child in PlushScene.transform)
-                {
-                    child.gameObject.SetActive(false);
-                }
+            if (itemPicked.itemName == "Monkey" && InventoryManager.haveMonkey == false)
+            {
+                inventory.Add(itemPicked);
+                PlushScene.transform.GetComponent<MeshRenderer>().enabled=false;
+                InventoryManager.haveMonkey = true; 
+            }
+            if (itemPicked.itemName == "Rabbit" && InventoryManager.haveRabbit == false)
+            {
+                inventory.Add(itemPicked);
+                InventoryManager.haveRabbit = true;
+                foreach (Transform child in PlushScene.transform)
+                    {
+                        child.gameObject.SetActive(false);
+                    }
+            }
+            if (itemPicked.itemName == "Elephant" && InventoryManager.haveElephant == false)
+            {
+                inventory.Add(itemPicked);
+                InventoryManager.haveElephant = true;
+                foreach (Transform child in PlushScene.transform)
+                    {
+                        child.gameObject.SetActive(false);
+                    }
+            }
+            if (itemPicked.itemName == "Dinosaur" && InventoryManager.haveDinosaur == false)
+            {
+                inventory.Add(itemPicked);
+                InventoryManager.haveDinosaur = true;
+                foreach (Transform child in PlushScene.transform)
+                    {
+                        child.gameObject.SetActive(false);
+                    }
+            }
+            if (itemPicked.itemName == "Alligator" && InventoryManager.haveAlligator == false)
+            {
+                inventory.Add(itemPicked);
+                InventoryManager.haveAlligator = true;
+                foreach (Transform child in PlushScene.transform)
+                    {
+                        child.gameObject.SetActive(false);
+                    }
+            }
         }
     }
 

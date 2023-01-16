@@ -27,38 +27,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.1, y: 2, z: 2.5}
+  m_Size: {x: 5, y: 5, z: 5}
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &3748599502911108932
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5052778765968938158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b68b169bd248eb341bd61db1078f2400, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemPicked: {fileID: 11400000, guid: 8ba55df51e7fb344fb7df6f96698934a, type: 2}
-  inventory: {fileID: 0}
-  player: {fileID: 0}
-  PlushScene: {fileID: 0}
-  MeshPlush: 0
---- !u!114 &8062483187609305941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5052778765968938158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06f53aaba9c8dae45a0e89f97a08993e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Item: {fileID: 11400000, guid: 8ba55df51e7fb344fb7df6f96698934a, type: 2}
 --- !u!23 &9055524652742541804
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -100,6 +70,36 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &3748599502911108932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5052778765968938158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b68b169bd248eb341bd61db1078f2400, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPicked: {fileID: 11400000, guid: 8ba55df51e7fb344fb7df6f96698934a, type: 2}
+  inventory: {fileID: 0}
+  player: {fileID: 0}
+  PlushScene: {fileID: 0}
+  MeshPlush: 0
+--- !u!114 &8062483187609305941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5052778765968938158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06f53aaba9c8dae45a0e89f97a08993e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Item: {fileID: 11400000, guid: 8ba55df51e7fb344fb7df6f96698934a, type: 2}
 --- !u!1001 &3667890594739613156
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -213,7 +213,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8429019503320660298, guid: a6e428d25621838498eed77023033d4b, type: 3}
       propertyPath: m_Name
-      value: Dinossaur
+      value: Dinosaur
       objectReference: {fileID: 0}
     - target: {fileID: 8429019503320660298, guid: a6e428d25621838498eed77023033d4b, type: 3}
       propertyPath: m_TagString

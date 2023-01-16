@@ -1937,6 +1937,34 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8386630132946180679, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8386630132946180679, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8386630132946180679, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8386630132946180679, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8386630132946180679, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8386630132946180679, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: SelectItem, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8386630132946180679, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
 --- !u!114 &1175852255 stripped
@@ -3065,7 +3093,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3925158693819045660, guid: 4d02487f030ac984fab3a073b3f68abb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.33714092
+      value: -0.7
       objectReference: {fileID: 0}
     - target: {fileID: 3925158693819045660, guid: 4d02487f030ac984fab3a073b3f68abb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3202,7 +3230,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5052778765968938158, guid: ac50c6df83d113d4383616094baedb90, type: 3}
       propertyPath: m_Name
-      value: Dinossaur
+      value: Dinosaur
       objectReference: {fileID: 0}
     - target: {fileID: 5052778765968938158, guid: ac50c6df83d113d4383616094baedb90, type: 3}
       propertyPath: m_IsActive
