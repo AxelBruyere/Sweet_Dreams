@@ -20,6 +20,12 @@ public class TimeEvents : MonoBehaviour
     public Animator animNotHidden;
 
     public AudioSource Screamer;
+    public AudioSource footStep;
+    public AudioSource doorOpen;
+    public AudioSource doorClose;
+    public AudioSource whereAreYou;
+    public AudioSource iveGotYouNow;
+    public AudioSource comeHere;
 
     public bool monsterHere = false;
     
@@ -36,8 +42,8 @@ public class TimeEvents : MonoBehaviour
 
     private void Update(){
         if(dead && !Screamer.isPlaying){
-            //Debug.Log("Changement de scène");
-            SceneManager.LoadScene(7);
+            Debug.Log("Changement de scène");
+            //SceneManager.LoadScene(7);
         }
     }
 
@@ -68,7 +74,7 @@ public class TimeEvents : MonoBehaviour
                 //////////////////////////////////////////////
                 //////////////////////////////////////////////hidingCamera.GetComponent<LookWithMouse>().enabled = false; //Disables camera movements
                 /////////////////////////////////////////////
-                //hidingCamera.transform.eulerAngles = new Vector3(0.0f,0.0f,0.0f);
+                hidingCamera.transform.eulerAngles = new Vector3(0.0f,0.0f,0.0f);
                 yield return new WaitForSeconds(1.0f); //Waits a few frames
                 flashlightHidden.GetComponent<Light>().intensity = 100.0f; //Makes the light turns back on 
                 Screamer.Play();
@@ -127,6 +133,10 @@ public class TimeEvents : MonoBehaviour
 
 
         }
+        
+    }
+
+    public void monsterComingSound(){
         
     }
 
