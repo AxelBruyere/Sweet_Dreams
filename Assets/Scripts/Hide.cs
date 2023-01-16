@@ -78,6 +78,7 @@ public class Hide : MonoBehaviour
         if(dead && !Screamer.isPlaying){
             SceneManager.LoadScene("DefeatMenu");
         }
+        
         if(isHiding){
             isFlashLightOn = flashlightHidden.activeInHierarchy;
 

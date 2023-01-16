@@ -30,20 +30,21 @@ public class TimeEvents : MonoBehaviour
     public bool monsterHere = false;
     
     private bool dead = false;
+
+    public GameObject hidingPlace;
     
     void Start(){ 
-        StartCoroutine(monsterAppearance(10,10,5));
+        StartCoroutine(monsterAppearance(5,10,5));
 
         animHidden = flashlightHidden.GetComponent<Animator>();
         animNotHidden = flashlightNotHidden.GetComponent<Animator>();
-
-        
+        hidingPlace = GameObject.FindWithTag("HidingPlace");
     }
 
     private void Update(){
         if(dead && !Screamer.isPlaying){
-            Debug.Log("Changement de scène");
-            //SceneManager.LoadScene(7);
+            //Debug.Log("Changement de scène");
+            SceneManager.LoadScene(7);
         }
     }
 
@@ -58,12 +59,20 @@ public class TimeEvents : MonoBehaviour
             yield return new WaitForSeconds(monsterFrequency);
             Debug.Log("Coming");
             /*Monster's here : if you're not hidden, you lose*/
-            monsterComingSound(5);
-            
+            //monsterComingSound(5);
+            footStep.Play();
+            yield return new WaitForSeconds(5);
+            footStep.Stop();
+            doorOpen.Play();
+            yield return new WaitForSeconds(0.625f);
+            doorOpen.Stop();
+            yield return new WaitForSeconds(0.5f);
+            doorClose.Play();
+            yield return new WaitForSeconds(0.75f);
+            doorClose.Stop();
 
             /*If you're hidden with the light on when the monster arrives */
             if (hidingCamera.enabled && flashlightHidden.activeSelf){
-                GetComponent<FlashlightHidden>().enabled = false;//Disable flashlight controls
                 animHidden.enabled = true; //Triggers blinking light animation
                 while (animHidden.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0){
                     yield return new WaitForSeconds(0.1f); //Waits for animation end
@@ -78,10 +87,10 @@ public class TimeEvents : MonoBehaviour
                 yield return new WaitForSeconds(1.0f); //Waits a few frames
                 flashlightHidden.GetComponent<Light>().intensity = 100.0f; //Makes the light turns back on 
                 Screamer.Play();
+                comeHere.Play();
                 dead = true;
-                GetComponent<FlashlightHidden>().enabled = false;
-                
-
+                hidingPlace.GetComponent<Hide>().enabled = false;
+                gameObject.GetComponent<Flashlight>().enabled = false;
             }
 
             /*If you're not hidden and the light is on when the monster arrives */
@@ -99,8 +108,10 @@ public class TimeEvents : MonoBehaviour
                 yield return new WaitForSeconds(1.0f); //Waits a few frames
                 flashlightNotHidden.GetComponent<Light>().intensity = 100.0f; //Makes the light turns back on
                 Screamer.Play();
+                iveGotYouNow.Play();
                 dead = true;
-                GetComponent<FlashlightHidden>().enabled = false;
+                hidingPlace.GetComponent<Hide>().enabled = false;
+                gameObject.GetComponent<Flashlight>().enabled = false;
             }
 
 
@@ -114,8 +125,10 @@ public class TimeEvents : MonoBehaviour
                 mainCamera.transform.eulerAngles = new Vector3(-30.0f,mainCamera.transform.eulerAngles.y,mainCamera.transform.eulerAngles.z); //Rotates the camera in order to see the monster
                 flashlightNotHidden.SetActive(true);//Active the flashlight
                 Screamer.Play();
+                iveGotYouNow.Play();
                 dead = true;
-                GetComponent<FlashlightHidden>().enabled = false;
+                hidingPlace.GetComponent<Hide>().enabled = false;
+                gameObject.GetComponent<Flashlight>().enabled = false;
             }
 
 
@@ -124,8 +137,9 @@ public class TimeEvents : MonoBehaviour
                 Debug.Log("He's Here");
                 monsterHidden.SetActive(true); //Makes the monster appears in order to have it in front of the player in case he/she turns the light back on
                 monsterHere = true; //Useful to manage the case the players turns de light back on before the monster leaves
+                whereAreYou.Play();
                 yield return new WaitForSeconds(timeBeforeLeaving); //Waits until the monster leaves
-                if (!GetComponent<FlashlightHidden>().dead){
+                if (!hidingPlace.GetComponent<Hide>().dead){
                     monsterHere = false; 
                     monsterHidden.SetActive(false); //Makes the monster disappears
                     }
@@ -135,18 +149,4 @@ public class TimeEvents : MonoBehaviour
         }
         
     }
-
-    public IEnumerator monsterComingSound(int timeToHide){
-        footStep.enabled = true;
-        yield return new WaitForSeconds(timeToHide);
-        footStep.enabled = false;
-        doorOpen.enabled = true;
-        yield return new WaitForSeconds(1.0f);
-        doorOpen.enabled = false;
-        doorClose.enabled = true;
-        yield return new WaitForSeconds(1.0f);
-        doorClose.enabled = false;
-    }
-
-
 }
