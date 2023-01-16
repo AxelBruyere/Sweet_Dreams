@@ -26,18 +26,18 @@ public class TimeEvents : MonoBehaviour
     private bool dead = false;
     
     void Start(){ 
-        StartCoroutine(monsterAppearance(5,5,5));
+        StartCoroutine(monsterAppearance(10,10,5));
+
         animHidden = flashlightHidden.GetComponent<Animator>();
         animNotHidden = flashlightNotHidden.GetComponent<Animator>();
 
-        hidingCamera = GameObject.Find("CameraHide").GetComponent<Camera>();
-        flashlightHidden = GameObject.Find("Flashlight Hidden");
-        monsterHidden = GameObject.Find("MonsterHidden");
+        
     }
 
     private void Update(){
         if(dead && !Screamer.isPlaying){
-            SceneManager.LoadScene(7);
+            Debug.Log("Changement de scène");
+            //SceneManager.LoadScene(7);
         }
     }
 

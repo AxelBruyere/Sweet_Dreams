@@ -17,9 +17,7 @@ public class FlashlightHidden : MonoBehaviour
     //turn off the flashlight in the beggining
     void Start()
     {
-        flashlightHidden.SetActive(false);
-        cameraHidden = GameObject.Find("CameraHide").GetComponent<Camera>();
-        flashlightHidden = GameObject.Find("Flashlight Hidden");
+        flashlightHidden.SetActive(false); 
     }
 
     //check if the key to turn on/off the flashlight is pressed
