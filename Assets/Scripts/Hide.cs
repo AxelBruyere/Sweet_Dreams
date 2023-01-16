@@ -55,7 +55,7 @@ public class Hide : MonoBehaviour
         mainMusic = player.transform.Find("Character").gameObject.transform.Find("Main Camera").gameObject.GetComponent<AudioSource>();
         //Debug.Log(player.transform.Find("Character").gameObject.transform.Find("Main Camera").gameObject.transform.Find("Flashlight").gameObject);
         flashlight = player.transform.Find("Character").gameObject.transform.Find("Main Camera").gameObject.transform.Find("Flashlight").gameObject;
-        //test = player.Find("Character");
+        timeEvent = player.GetComponent<TimeEvents>();
         //set the active camera
         mainCamera.enabled = true;
         mainAudio.enabled = true;
@@ -88,7 +88,7 @@ public class Hide : MonoBehaviour
                     if (timeEvent.monsterHere){ 
                         Screamer.Play();
                         dead = true;
-                        GetComponent<TimeEvents>().enabled = false;
+                        //GetComponent<TimeEvents>().enabled = false;
                     }
                     
                 }else{
