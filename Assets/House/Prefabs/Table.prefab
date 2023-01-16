@@ -997,6 +997,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HideBox
       objectReference: {fileID: 0}
+    - target: {fileID: 4402391766788507121, guid: 41a545e37cced5f4290bb6ba0e5ef037, type: 3}
+      propertyPath: m_TagString
+      value: HidingPlace
+      objectReference: {fileID: 0}
     - target: {fileID: 4402391766788507123, guid: 41a545e37cced5f4290bb6ba0e5ef037, type: 3}
       propertyPath: flashlight
       value: 

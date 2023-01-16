@@ -614,40 +614,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4996075005658483855, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
   m_PrefabInstance: {fileID: 1602336751}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &259640226
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 259640224}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdc72066bd78fef49aabff4f9fa396b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mainCamera: {fileID: 1660988001}
-  hidingCamera: {fileID: 532947391}
-  monsterHidden: {fileID: 1865607427}
-  flashlightHidden: {fileID: 632461185}
-  animHidden: {fileID: 0}
-  monsterNotHidden: {fileID: 371655272}
-  flashlightNotHidden: {fileID: 653304360}
-  animNotHidden: {fileID: 0}
-  Screamer: {fileID: 259640233}
-  footStep: {fileID: 1602336759}
-  doorOpen: {fileID: 1602336758}
-  doorClose: {fileID: 1602336757}
-  whereAreYou: {fileID: 1602336756}
-  iveGotYouNow: {fileID: 1602336755}
-  comeHere: {fileID: 1602336754}
-  monsterHere: 0
-  hidingPlace: {fileID: 0}
---- !u!82 &259640233 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 3174548137793793269, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
-  m_PrefabInstance: {fileID: 1602336751}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &283861702
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -937,11 +903,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15012c8d272f22b4bbfaf78907c36a5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &371655272 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 484145422822475028, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
-  m_PrefabInstance: {fileID: 1602336751}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &472758195
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2188,6 +2149,18 @@ PrefabInstance:
       propertyPath: ItemContent
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 582472361022446822, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
+      propertyPath: hidingCamera
+      value: 
+      objectReference: {fileID: 532947391}
+    - target: {fileID: 582472361022446822, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
+      propertyPath: monsterHidden
+      value: 
+      objectReference: {fileID: 1865607427}
+    - target: {fileID: 582472361022446822, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
+      propertyPath: flashlightHidden
+      value: 
+      objectReference: {fileID: 632461185}
     - target: {fileID: 601264945417596785, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -2409,36 +2382,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c4c942942fa1af41a1420c985da4751, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!82 &1602336754 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 9087487904234399378, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
-  m_PrefabInstance: {fileID: 1602336751}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &1602336755 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 2098198400036683599, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
-  m_PrefabInstance: {fileID: 1602336751}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &1602336756 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 2470943928307276003, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
-  m_PrefabInstance: {fileID: 1602336751}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &1602336757 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 11718394889318811, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
-  m_PrefabInstance: {fileID: 1602336751}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &1602336758 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 5038676467046478453, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
-  m_PrefabInstance: {fileID: 1602336751}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &1602336759 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 8359973770297512066, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
-  m_PrefabInstance: {fileID: 1602336751}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1634381299 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2278198950457263268, guid: 645e4e5de731c7a4aa25ea3e587580af, type: 3}

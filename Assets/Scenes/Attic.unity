@@ -3380,7 +3380,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7223251833994067865, guid: bff16d17e1a303e43bc90852d5b64ef9, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bff16d17e1a303e43bc90852d5b64ef9, type: 3}
@@ -4314,6 +4314,50 @@ PrefabInstance:
       propertyPath: flashlightHidden
       value: 
       objectReference: {fileID: 644889935}
+    - target: {fileID: 484145422822475028, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 582472361022446822, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
+      propertyPath: Screamer
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 582472361022446822, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
+      propertyPath: comeHere
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 582472361022446822, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
+      propertyPath: doorOpen
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 582472361022446822, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
+      propertyPath: footStep
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 582472361022446822, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
+      propertyPath: doorClose
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 582472361022446822, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 582472361022446822, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
+      propertyPath: whereAreYou
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 582472361022446822, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
+      propertyPath: iveGotYouNow
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 582472361022446822, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
+      propertyPath: monsterNotHidden
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 582472361022446822, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
+      propertyPath: flashlightNotHidden
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 601264945417596785, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -4341,6 +4385,10 @@ PrefabInstance:
     - target: {fileID: 921583315238759786, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2117093411892771135, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3663212071716149688, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
       propertyPath: PlushScene
@@ -4429,6 +4477,10 @@ PrefabInstance:
     - target: {fileID: 6748267551247500235, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
       propertyPath: m_Intensity
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7434525494219391761, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7821110045811845672, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
       propertyPath: hidingCamera

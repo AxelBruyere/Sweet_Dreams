@@ -49,6 +49,7 @@ public class Hide : MonoBehaviour
     
     void Start()
     {
+        isHidingWardrobe = false;
         player = GameObject.FindWithTag("Player");
         mainCamera = Camera.main;
         mainAudio = player.transform.Find("Character").gameObject.transform.Find("Main Camera").gameObject.GetComponent<AudioListener>();

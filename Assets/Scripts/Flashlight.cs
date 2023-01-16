@@ -14,6 +14,7 @@ public class Flashlight : MonoBehaviour
     //turn off the flashlight in the beggining
     void Start()
     {
+        flashlightstate = false;
         flashlightLight.gameObject.SetActive(false);
     }
 

@@ -12,6 +12,12 @@ public class SelectItem : MonoBehaviour
     private InventoryManager inventory;
     private GameObject player;
 
+    private bool placeMonkey = false;
+    private bool placeRabbit = false;
+    private bool placeDinosaur = false;
+    private bool placeAlligator = false;
+    private bool placeElephant = false;
+
     public void Awake()
     {
         player = GameObject.FindWithTag("Player");
@@ -28,6 +34,10 @@ public class SelectItem : MonoBehaviour
         {
             plush = inventory.PlushScene;
         } 
+
+        if(placeMonkey && placeRabbit && placeDinosaur && placeAlligator && placeElephant){
+            SceneManager.LoadScene("WinMenu");
+        }
     }
 
     public void Selection()
@@ -50,6 +60,7 @@ public class SelectItem : MonoBehaviour
                             child.gameObject.SetActive(true);
                         }
                     inventory.Remove(plush.GetComponent<ItemControler>().Item);
+                    placeAlligator = true;
                 }
                 else if (slotName == "Elephant" && (sceneName == "Bathroom"||sceneName == "ChildRoom"))
                 {
@@ -58,6 +69,7 @@ public class SelectItem : MonoBehaviour
                             child.gameObject.SetActive(true);
                         }
                     inventory.Remove(plush.GetComponent<ItemControler>().Item);
+                    placeElephant = true;
                 }
                 else if (slotName == "Rabbit" && (sceneName == "LivingRoomAndKitchen"||sceneName == "ChildRoom"))
                 {
@@ -66,11 +78,13 @@ public class SelectItem : MonoBehaviour
                             child.gameObject.SetActive(true);
                         }
                     inventory.Remove(plush.GetComponent<ItemControler>().Item);
+                    placeRabbit = true;
                 }
                 else if (slotName == "Monkey" && (sceneName == "Attic"||sceneName == "ChildRoom"))
                 {
                     plush.transform.GetComponent<MeshRenderer>().enabled=true;
                     inventory.Remove(plush.GetComponent<ItemControler>().Item);
+                    placeMonkey = true;
                 }
                 else if (slotName == "Dinosaur" && (sceneName == "Office"||sceneName == "ChildRoom"))
                 {
@@ -79,6 +93,7 @@ public class SelectItem : MonoBehaviour
                             child.gameObject.SetActive(true);
                         }
                     inventory.Remove(plush.GetComponent<ItemControler>().Item);
+                    placeDinosaur = true;
                 }
             }
             else

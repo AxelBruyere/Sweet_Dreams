@@ -19,6 +19,7 @@ public class TimeEvents : MonoBehaviour
     public GameObject flashlightNotHidden;
     public Animator animNotHidden;
 
+    AudioSource[] audiosSources;
     public AudioSource Screamer;
     public AudioSource footStep;
     public AudioSource doorOpen;
@@ -33,12 +34,39 @@ public class TimeEvents : MonoBehaviour
 
     public GameObject hidingPlace;
     
-    void Start(){ 
-        StartCoroutine(monsterAppearance(5,10,5));
+    private void Awake()
+    {
+        mainCamera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
+        monsterNotHidden = GameObject.FindWithTag("Monster");
+        foreach (Transform child in monsterNotHidden.transform)
+        {
+            child.gameObject.SetActive(false);
+        }
+        flashlightNotHidden = GameObject.FindWithTag("MainCamera").transform.GetChild(0).gameObject;
+        
+        hidingPlace = GameObject.FindWithTag("HidingPlace");
+        hidingCamera = hidingPlace.transform.GetChild(0).gameObject.GetComponent<Camera>();
+        flashlightHidden = hidingPlace.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject;
+        monsterHidden = hidingPlace.transform.GetChild(1).gameObject;
+
+        audiosSources = gameObject.GetComponents<AudioSource>();
+
+        doorClose = audiosSources[0];
+        iveGotYouNow = audiosSources[1];
+        whereAreYou = audiosSources[2];
+        Screamer = audiosSources[3];
+        doorOpen = audiosSources[4];
+        footStep = audiosSources[5];
+        comeHere = audiosSources[6];
+        footStep.Stop();
+    }
+    
+    private void Start(){ 
 
         animHidden = flashlightHidden.GetComponent<Animator>();
         animNotHidden = flashlightNotHidden.GetComponent<Animator>();
-        hidingPlace = GameObject.FindWithTag("HidingPlace");
+        
+        StartCoroutine(monsterAppearance(5,10,5));
     }
 
     private void Update(){
@@ -100,7 +128,11 @@ public class TimeEvents : MonoBehaviour
                 while (animNotHidden.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0){
                     yield return new WaitForSeconds(0.1f); //Waits for animation end
                 }
-                monsterNotHidden.SetActive(true); //Makes the monster appears
+                //monsterNotHidden.SetActive(true); //Makes the monster appears
+                foreach (Transform child in monsterNotHidden.transform)
+                {
+                    child.gameObject.SetActive(true);
+                }
                 animNotHidden.enabled = false; // Disables animation
                 mainCamera.GetComponent<LookWithMouse>().enabled = false; //Disables camera movements
                 transform.GetComponent<PlayerMovement>().enabled = false; //Disables character movements
@@ -121,7 +153,11 @@ public class TimeEvents : MonoBehaviour
                 transform.GetComponent<PlayerMovement>().enabled = false; //Disables character movements
                 transform.GetComponent<Flashlight>().enabled = false;//Disable flashlight controls
 
-                monsterNotHidden.SetActive(true); //Makes the monster appears
+                //monsterNotHidden.SetActive(true); //Makes the monster appears
+                foreach (Transform child in monsterNotHidden.transform)
+                {
+                    child.gameObject.SetActive(true);
+                }
                 mainCamera.transform.eulerAngles = new Vector3(-30.0f,mainCamera.transform.eulerAngles.y,mainCamera.transform.eulerAngles.z); //Rotates the camera in order to see the monster
                 flashlightNotHidden.SetActive(true);//Active the flashlight
                 Screamer.Play();
