@@ -27,6 +27,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Attic.unity
     guid: b11694e34984e1d448ab07ab6d2c9866
   - enabled: 1
-    path: Assets/Scenes/DefeatMenu.unity
+    path: Assets/Scenes/WinMenu.unity
     guid: c610a9aeeb7861f41945321d3f01fa82
   m_configObjects: {}
