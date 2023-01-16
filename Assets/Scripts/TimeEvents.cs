@@ -70,7 +70,6 @@ public class TimeEvents : MonoBehaviour
                 /////////////////////////////////////////////
                 //hidingCamera.transform.eulerAngles = new Vector3(0.0f,0.0f,0.0f);
                 yield return new WaitForSeconds(1.0f); //Waits a few frames
-                Debug.Log("Rallume");
                 flashlightHidden.GetComponent<Light>().intensity = 100.0f; //Makes the light turns back on 
                 Screamer.Play();
                 dead = true;

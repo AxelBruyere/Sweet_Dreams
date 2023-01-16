@@ -485,6 +485,10 @@ PrefabInstance:
       propertyPath: InventoryItem
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 331233945135267815, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 601264945417596785, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -573,6 +577,10 @@ PrefabInstance:
       propertyPath: InventoryUI
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7821110045811845672, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8378180890567586199, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
       propertyPath: ActionText
       value: 
@@ -581,7 +589,9 @@ PrefabInstance:
       propertyPath: ActionDisplay
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 331233945135267815, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
+    - {fileID: 7821110045811845672, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
 --- !u!114 &280586790 stripped
 MonoBehaviour:
