@@ -17,7 +17,7 @@ public class FlashlightHidden : MonoBehaviour
     //turn off the flashlight in the beggining
     void Start()
     {
-        flashlightHidden.SetActive(false);
+        flashlightHidden.SetActive(false); 
     }
 
     //check if the key to turn on/off the flashlight is pressed

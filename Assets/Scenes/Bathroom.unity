@@ -1623,6 +1623,14 @@ PrefabInstance:
       propertyPath: InventoryItem
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 331233945135267815, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
+      propertyPath: cameraHidden
+      value: 
+      objectReference: {fileID: 1366220322}
+    - target: {fileID: 331233945135267815, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
+      propertyPath: flashlightHidden
+      value: 
+      objectReference: {fileID: 1702738897}
     - target: {fileID: 601264945417596785, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -1707,6 +1715,14 @@ PrefabInstance:
       propertyPath: InventoryUI
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7821110045811845672, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
+      propertyPath: hidingCamera
+      value: 
+      objectReference: {fileID: 1366220322}
+    - target: {fileID: 7821110045811845672, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
+      propertyPath: flashlightHidden
+      value: 
+      objectReference: {fileID: 1702738897}
     - target: {fileID: 8378180890567586199, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
       propertyPath: ActionText
       value: 
@@ -1824,6 +1840,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8429506132492601995, guid: dd46de17300ff034dba301a0ee1b0a23, type: 3}
   m_PrefabInstance: {fileID: 1875487341}
   m_PrefabAsset: {fileID: 0}
+--- !u!20 &1366220322 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 170158293161033927, guid: 71d50ca69424dc44eb6d0dbec0377bf2, type: 3}
+  m_PrefabInstance: {fileID: 2812524898870930911}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1370265738 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 179306005075777513, guid: a1207588f2e8629498ee04b03b09ad5f, type: 3}
@@ -1912,7 +1933,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5768285398806039538, guid: 748f0e72059217d45b263d7074d70d85, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 5768285398806039538, guid: 748f0e72059217d45b263d7074d70d85, type: 3}
       propertyPath: m_LocalPosition.z

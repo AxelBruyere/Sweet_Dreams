@@ -26,13 +26,17 @@ public class TimeEvents : MonoBehaviour
     private bool dead = false;
     
     void Start(){ 
-        StartCoroutine(monsterAppearance(5,5,5));
+        StartCoroutine(monsterAppearance(10,10,5));
+
         animHidden = flashlightHidden.GetComponent<Animator>();
         animNotHidden = flashlightNotHidden.GetComponent<Animator>();
+
+        
     }
 
     private void Update(){
         if(dead && !Screamer.isPlaying){
+            //Debug.Log("Changement de scène");
             SceneManager.LoadScene(7);
         }
     }
@@ -64,8 +68,9 @@ public class TimeEvents : MonoBehaviour
                 //////////////////////////////////////////////
                 //////////////////////////////////////////////hidingCamera.GetComponent<LookWithMouse>().enabled = false; //Disables camera movements
                 /////////////////////////////////////////////
-                hidingCamera.transform.eulerAngles = new Vector3(0.0f,0.0f,0.0f);
+                //hidingCamera.transform.eulerAngles = new Vector3(0.0f,0.0f,0.0f);
                 yield return new WaitForSeconds(1.0f); //Waits a few frames
+                Debug.Log("Rallume");
                 flashlightHidden.GetComponent<Light>().intensity = 100.0f; //Makes the light turns back on 
                 Screamer.Play();
                 dead = true;

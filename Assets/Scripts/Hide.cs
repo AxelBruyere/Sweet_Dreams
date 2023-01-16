@@ -70,7 +70,6 @@ public class Hide : MonoBehaviour
         isFlashLightOn = flashlight.activeInHierarchy;
         //update the discance from the player to the target every interaction
         theDistance = PlayerCasting.DistanceFromTarget;
-        //TODO - dont working
         if(isHiding){
             if(Input.GetButtonDown("Action")){
                 //Enable player
@@ -122,7 +121,7 @@ public class Hide : MonoBehaviour
                     hidingMusic.Play();
                     //flashlight.SetActive(false);
                     //isFlashLightOn = false;
-                    if (isFlashLightOn){
+                    if (isFlashLightOn && isHiding){
                         flashlightHidden.SetActive(true);
                     }
 
@@ -134,8 +133,6 @@ public class Hide : MonoBehaviour
                     hideText.SetActive(false);
                     leaveDisplay.SetActive(true);
                     leaveText.SetActive(true);
-                    
-                    //onInteract.Invoke();
                 }
             }else{
                 //hide text and button

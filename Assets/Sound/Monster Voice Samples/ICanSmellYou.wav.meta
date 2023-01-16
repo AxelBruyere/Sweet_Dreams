@@ -1,5 +1,21 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+<<<<<<<< HEAD:Assets/Sound/Monster Voice Samples/ICanSmellYou.wav.meta
 guid: 5ccc3eb77e734c04fa7a36b8d0ebc298
+========
+<<<<<<< HEAD
+guid: ac6f5f65cbba9ce4f8604216e6eb75b7
+=======
+guid: 37a51cfc51ca7a84aa558ac7967f2508
+>>>>>>> d6d823f04cca7ba40d5a4dab942634b23b49a939
+>>>>>>>> 88c70fd6394e017f766bb9aa3a2537c8758ad448:Assets/Sound/Monster Voice Samples/WheeereAaareYoouu.wav.meta
+=======
+<<<<<<< HEAD:Assets/Sound/Monster Voice Samples/ICanSmellYou.wav.meta
+guid: 389a74005894c9f4c814c7eee3625884
+=======
+guid: 81dd219d7d02ec042b82fa5f7f41e689
+>>>>>>> d6d823f04cca7ba40d5a4dab942634b23b49a939:Assets/Sound/Monster Voice Samples/Monster_2.wav.meta
+>>>>>>> 88c70fd6394e017f766bb9aa3a2537c8758ad448
 AudioImporter:
   externalObjects: {}
   serializedVersion: 6

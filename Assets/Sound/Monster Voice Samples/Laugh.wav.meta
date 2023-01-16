@@ -1,5 +1,17 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 34752f19afca26b489e0752f50a712d5
+=======
+<<<<<<<< HEAD:Assets/Sound/Monster Voice Samples/ComeHereYou.wav.meta
+guid: 65c884cfe61f7b14b949c7ce1dddf2da
+========
+<<<<<<< HEAD
+guid: c133744def92b124e845c61d71facaad
+=======
+guid: 17c660fd134f42a4f971e75a350c1024
+>>>>>>> d6d823f04cca7ba40d5a4dab942634b23b49a939
+>>>>>>>> 88c70fd6394e017f766bb9aa3a2537c8758ad448:Assets/Sound/Monster Voice Samples/Laugh.wav.meta
+>>>>>>> 88c70fd6394e017f766bb9aa3a2537c8758ad448
 AudioImporter:
   externalObjects: {}
   serializedVersion: 6
