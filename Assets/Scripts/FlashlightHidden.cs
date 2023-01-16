@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class FlashlightHidden : MonoBehaviour
 {
+    Flashlight flashlight;
     //bool to indicate if flashlight is on/off
     private bool flashlightActive = true;
     public Camera cameraHidden;
@@ -18,11 +19,13 @@ public class FlashlightHidden : MonoBehaviour
     void Start()
     {
         flashlightHidden.SetActive(false); 
+        Debug.Log(flashlight.flashlightActive);    
     }
 
     //check if the key to turn on/off the flashlight is pressed
     void Update()
     {   
+        
         if (cameraHidden.enabled){
             if(dead && !Screamer.isPlaying){
                 SceneManager.LoadScene(7);

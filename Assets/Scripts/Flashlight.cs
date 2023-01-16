@@ -6,7 +6,8 @@ public class Flashlight : MonoBehaviour
 {
     [SerializeField] GameObject flashlightLight;
     //bool to indicate if flashlight is on/off
-    private bool flashlightActive = false;
+    public bool flashlightActive = false;
+    public static bool flashlightstate = false;
 
     public GameObject monster;
 
@@ -19,18 +20,18 @@ public class Flashlight : MonoBehaviour
     //check if the key to turn on/off the flashlight is pressed
     void Update()
     {
+        flashlightActive = flashlightstate;
         if(Input.GetKeyDown(KeyCode.F)){
             if(flashlightActive == false){
                 //turn on the flashlight
                 flashlightLight.gameObject.SetActive(true);
-                flashlightActive = true;
-                //if (monster.activeSelf){
-                  //  Debug.Log("You lost");
-                //}
+                //flashlightActive = true;
+                flashlightstate = true;
             }else{
                 //turn off the flashlight
                 flashlightLight.gameObject.SetActive(false);
-                flashlightActive = false;  
+                //flashlightActive = false;  
+                flashlightstate = false;
             }
         }
     }
