@@ -726,7 +726,8 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3943203508931389606, guid: 1fdb6bb9dfaac164fafbd7a06bc336b4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1fdb6bb9dfaac164fafbd7a06bc336b4, type: 3}
 --- !u!20 &656546963 stripped
 Camera:
@@ -856,6 +857,14 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1670250515863670990, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
+      propertyPath: cameraHidden
+      value: 
+      objectReference: {fileID: 2017142608}
+    - target: {fileID: 1670250515863670990, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
+      propertyPath: flashlightHidden
+      value: 
+      objectReference: {fileID: 1571932370}
     - target: {fileID: 3663212071716149691, guid: 269c2e6c31f305147aea38633a497e43, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1040,12 +1049,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: washingmachine
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8423343380346346000, guid: 71d50ca69424dc44eb6d0dbec0377bf2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 71d50ca69424dc44eb6d0dbec0377bf2, type: 3}
 --- !u!4 &1512791412 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2520778222865251831, guid: 7efed3281286e9d4d88775aa9816869c, type: 3}
   m_PrefabInstance: {fileID: 965379786}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1571932370 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4846377534154389650, guid: 71d50ca69424dc44eb6d0dbec0377bf2, type: 3}
+  m_PrefabInstance: {fileID: 1492508193}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1689605278
 GameObject:
@@ -1489,6 +1504,11 @@ GameObject:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1620677938040810180, guid: 7a13da880fa85c24782c154e8140885a, type: 3}
   m_PrefabInstance: {fileID: 1991688294}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &2017142608 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 170158293161033927, guid: 71d50ca69424dc44eb6d0dbec0377bf2, type: 3}
+  m_PrefabInstance: {fileID: 1492508193}
   m_PrefabAsset: {fileID: 0}
 --- !u!224 &2134923249 stripped
 RectTransform:

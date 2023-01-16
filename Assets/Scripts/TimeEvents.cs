@@ -29,6 +29,10 @@ public class TimeEvents : MonoBehaviour
         StartCoroutine(monsterAppearance(5,5,5));
         animHidden = flashlightHidden.GetComponent<Animator>();
         animNotHidden = flashlightNotHidden.GetComponent<Animator>();
+
+        hidingCamera = GameObject.Find("CameraHide").GetComponent<Camera>();
+        flashlightHidden = GameObject.Find("Flashlight Hidden");
+        monsterHidden = GameObject.Find("MonsterHidden");
     }
 
     private void Update(){

@@ -109,8 +109,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caddbbc237edee942a4b453a628816d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  flashlight: {fileID: 9082755719096279967}
   mainCamera: {fileID: 0}
   hidingCamera: {fileID: 4544451520118545354}
+  mainAudio: {fileID: 0}
+  hidingAudio: {fileID: 0}
+  mainMusic: {fileID: 0}
+  hidingMusic: {fileID: 0}
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -123,9 +129,7 @@ MonoBehaviour:
   leaveText: {fileID: 0}
   theHidingPlace: {fileID: 4402391766788507121}
   isFlashLightOn: 0
-  flashlight: {fileID: 9082755719096279967}
   flashlightHidden: {fileID: 0}
-  character: {fileID: 0}
 --- !u!1 &8019394972931941030
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,7 +142,6 @@ GameObject:
   - component: {fileID: 4544451520118545354}
   - component: {fileID: 2405512326517200982}
   - component: {fileID: 502254420156394475}
-  - component: {fileID: 5307525869478838557}
   m_Layer: 0
   m_Name: CameraHide
   m_TagString: Untagged
@@ -326,20 +329,6 @@ MonoBehaviour:
       data1: 0
       data2: 0
   defaultFrameSettings: 0
---- !u!114 &5307525869478838557
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8019394972931941030}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92634f83d97f9cd4bbb9d15ec00ba12c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  flashlightLight: {fileID: 9082755719096279967}
-  monster: {fileID: 0}
 --- !u!1 &9082755719096279967
 GameObject:
   m_ObjectHideFlags: 0
