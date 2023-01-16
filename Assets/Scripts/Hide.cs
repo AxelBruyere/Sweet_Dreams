@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class Hide : MonoBehaviour
 {  
@@ -41,7 +42,10 @@ public class Hide : MonoBehaviour
     
     public GameObject flashlightHidden;
     
-    //public GameObject test;
+    public TimeEvents timeEvent;
+
+    public AudioSource Screamer;
+    public bool dead;
     
     void Start()
     {
@@ -67,14 +71,39 @@ public class Hide : MonoBehaviour
     void Update()
     {
         //get the active/inactive state of the flashlight
-        isFlashLightOn = flashlight.activeInHierarchy;
+        //isFlashLightOn = flashlight.activeInHierarchy;
         //update the discance from the player to the target every interaction
         theDistance = PlayerCasting.DistanceFromTarget;
+
+        if(dead && !Screamer.isPlaying){
+            SceneManager.LoadScene("DefeatMenu");
+        }
         if(isHiding){
+            isFlashLightOn = flashlightHidden.activeInHierarchy;
+
+            if(Input.GetKeyDown(KeyCode.F)){
+                if(!isFlashLightOn){
+                    //turn on the flashlight
+                    flashlightHidden.SetActive(true);
+                    if (timeEvent.monsterHere){ 
+                        Screamer.Play();
+                        dead = true;
+                        GetComponent<TimeEvents>().enabled = false;
+                    }
+                    
+                }else{
+                    //turn off the flashlight
+                    flashlightHidden.SetActive(false);
+                }
+            }
+
             if(Input.GetButtonDown("Action")){
                 //Enable player
                 //GameObject.Find("PlayerControllerFPS Variant 1").transform.GetChild(0).SetActive(true);                
                 player.transform.GetChild(0).gameObject.SetActive(true);
+
+                flashlightHidden.SetActive(false);
+                flashlight.SetActive(isFlashLightOn);
 
                 //Switch cameras
                 mainCamera.enabled = true;
@@ -92,6 +121,7 @@ public class Hide : MonoBehaviour
                 leaveText.SetActive(false);
             }
         }else{
+            isFlashLightOn = flashlight.activeInHierarchy;
             isHiding = justHide;
             Wait();
         }
@@ -108,6 +138,9 @@ public class Hide : MonoBehaviour
             
                 //get the action key
                 if(Input.GetButtonDown("Action")){
+
+                    flashlightHidden.SetActive(isFlashLightOn);
+                    flashlight.SetActive(false);
                     //Disable player
                     //GameObject.Find("PlayerControllerFPS Variant 1").transform.GetChild(0).SetActive(false);
                     player.transform.GetChild(0).gameObject.SetActive(false);
@@ -119,12 +152,6 @@ public class Hide : MonoBehaviour
                     hidingCamera.enabled = true;
                     hidingAudio.enabled = true;
                     hidingMusic.Play();
-                    //flashlight.SetActive(false);
-                    //isFlashLightOn = false;
-                    if (isFlashLightOn && isHiding){
-                        flashlightHidden.SetActive(true);
-                    }
-
 
                     justHide = true;
                     isHidingWardrobe = true;
