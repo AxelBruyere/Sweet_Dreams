@@ -1,0 +1,26 @@
+fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Sound/Monster Voice Samples/ImComing.wav.meta
+guid: f6fd1dcf54e22d742b22eaeee3461865
+=======
+guid: 17d27fa7c8a270d4d8c785f57858995f
+>>>>>>> d6d823f04cca7ba40d5a4dab942634b23b49a939:Assets/Sound/Monster Voice Samples/Monster_3.wav.meta
+AudioImporter:
+  externalObjects: {}
+  serializedVersion: 6
+  defaultSettings:
+    loadType: 0
+    sampleRateSetting: 0
+    sampleRateOverride: 44100
+    compressionFormat: 0
+    quality: 1
+    conversionMode: 0
+  platformSettingOverrides: {}
+  forceToMono: 0
+  normalize: 1
+  preloadAudioData: 1
+  loadInBackground: 0
+  ambisonic: 0
+  3D: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

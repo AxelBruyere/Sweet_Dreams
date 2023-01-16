@@ -58,7 +58,7 @@ public class TimeEvents : MonoBehaviour
             yield return new WaitForSeconds(monsterFrequency);
             Debug.Log("Coming");
             /*Monster's here : if you're not hidden, you lose*/
-            yield return new WaitForSeconds(timeToHide);
+            monsterComingSound(5);
             
 
             /*If you're hidden with the light on when the monster arrives */
@@ -136,8 +136,16 @@ public class TimeEvents : MonoBehaviour
         
     }
 
-    public void monsterComingSound(){
-        
+    public IEnumerator monsterComingSound(int timeToHide){
+        footStep.enabled = true;
+        yield return new WaitForSeconds(timeToHide);
+        footStep.enabled = false;
+        doorOpen.enabled = true;
+        yield return new WaitForSeconds(1.0f);
+        doorOpen.enabled = false;
+        doorClose.enabled = true;
+        yield return new WaitForSeconds(1.0f);
+        doorClose.enabled = false;
     }
 
 
