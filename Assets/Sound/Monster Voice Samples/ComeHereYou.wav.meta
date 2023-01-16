@@ -1,0 +1,26 @@
+fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Sound/Monster Voice Samples/ComeHereYou.wav.meta
+guid: 4267f4b7803d1ee498d4221bad566de0
+=======
+guid: 2b3bac4d73651eb4a9f0ed319560a822
+>>>>>>> d6d823f04cca7ba40d5a4dab942634b23b49a939:Assets/Sound/Monster Voice Samples/Monster.wav.meta
+AudioImporter:
+  externalObjects: {}
+  serializedVersion: 6
+  defaultSettings:
+    loadType: 0
+    sampleRateSetting: 0
+    sampleRateOverride: 44100
+    compressionFormat: 0
+    quality: 1
+    conversionMode: 0
+  platformSettingOverrides: {}
+  forceToMono: 0
+  normalize: 1
+  preloadAudioData: 1
+  loadInBackground: 0
+  ambisonic: 0
+  3D: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
