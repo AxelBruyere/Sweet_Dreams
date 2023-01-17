@@ -46,6 +46,10 @@ public class Hide : MonoBehaviour
 
     public AudioSource Screamer;
     public bool dead;
+
+    public AudioSource FlashlightSound;
+
+    public AudioSource comeHere;
     
     void Start()
     {
@@ -87,15 +91,21 @@ public class Hide : MonoBehaviour
                 if(!isFlashLightOn){
                     //turn on the flashlight
                     flashlightHidden.SetActive(true);
+                    FlashlightSound.Play();
                     if (timeEvent.monsterHere){ 
                         Screamer.Play();
+                        comeHere.Play();
                         dead = true;
-                        //GetComponent<TimeEvents>().enabled = false;
+                        if(player != null){
+                            //Destroy(player.GetComponent<TimeEvents>());
+                            player.GetComponent<TimeEvents>().whereAreYou.Stop();
+                        }
                     }
                     
                 }else{
                     //turn off the flashlight
                     flashlightHidden.SetActive(false);
+                    FlashlightSound.Play();
                 }
             }
 
