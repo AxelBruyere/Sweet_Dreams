@@ -36,6 +36,7 @@ public class SelectItem : MonoBehaviour
         } 
 
         if(placeMonkey && placeRabbit && placeDinosaur && placeAlligator && placeElephant){
+            player.GetComponent<OpenInventory>().InventoryClose();
             SceneManager.LoadScene("WinMenu");
         }
     }

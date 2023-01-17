@@ -55,6 +55,11 @@ public class PauseMenu : MonoBehaviour
     //function called when Menu button is pressed
     public void LoadMenu(){
         GameObject toDestroy = GameObject.FindWithTag("Player");
+        InventoryManager.haveMonkey = false;
+        InventoryManager.haveRabbit = false;
+        InventoryManager.haveDinosaur = false;
+        InventoryManager.haveAlligator = false;
+        InventoryManager.haveElephant = false;
         Destroy(toDestroy);
         //reactive the time flow
         Time.timeScale = 1f;

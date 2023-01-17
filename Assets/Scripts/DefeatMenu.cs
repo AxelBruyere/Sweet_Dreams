@@ -11,6 +11,11 @@ public class DefeatMenu : MonoBehaviour
 
     private void Awake(){
         Player = GameObject.FindWithTag("Player");
+        InventoryManager.haveMonkey = false;
+        InventoryManager.haveRabbit = false;
+        InventoryManager.haveDinosaur = false;
+        InventoryManager.haveAlligator = false;
+        InventoryManager.haveElephant = false;
         if (Player != null)
             Destroy(Player);
         //lock the cursor in the game area

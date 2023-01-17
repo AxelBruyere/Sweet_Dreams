@@ -73,6 +73,12 @@ public class TimeEvents : MonoBehaviour
     private void Update(){
         if(dead && !Screamer.isPlaying){
             //Debug.Log("Changement de scène");
+            //InventoryManager inventory = gameObject.transform.Find("InventoryManager").gameObject.transform.GetComponent<InventoryManager>();
+            InventoryManager.haveMonkey = false;
+            InventoryManager.haveRabbit = false;
+            InventoryManager.haveDinosaur = false;
+            InventoryManager.haveAlligator = false;
+            InventoryManager.haveElephant = false;
             SceneManager.LoadScene(7);
         }
     }
