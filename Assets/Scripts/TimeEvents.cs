@@ -36,6 +36,7 @@ public class TimeEvents : MonoBehaviour
     
     private void Awake()
     {
+        monsterHere = false;
         mainCamera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
         monsterNotHidden = GameObject.FindWithTag("Monster");
         foreach (Transform child in monsterNotHidden.transform)
@@ -66,7 +67,7 @@ public class TimeEvents : MonoBehaviour
         animHidden = flashlightHidden.GetComponent<Animator>();
         animNotHidden = flashlightNotHidden.GetComponent<Animator>();
         
-        StartCoroutine(monsterAppearance(5,10,5));
+        StartCoroutine(monsterAppearance(15,10,5));
     }
 
     private void Update(){

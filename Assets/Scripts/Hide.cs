@@ -60,7 +60,8 @@ public class Hide : MonoBehaviour
         mainMusic = player.transform.Find("Character").gameObject.transform.Find("Main Camera").gameObject.GetComponent<AudioSource>();
         //Debug.Log(player.transform.Find("Character").gameObject.transform.Find("Main Camera").gameObject.transform.Find("Flashlight").gameObject);
         flashlight = player.transform.Find("Character").gameObject.transform.Find("Main Camera").gameObject.transform.Find("Flashlight").gameObject;
-        timeEvent = player.GetComponent<TimeEvents>();
+        //timeEvent = player.GetComponent<TimeEvents>();
+        //Debug.Log(timeEvent);
         //set the active camera
         mainCamera.enabled = true;
         mainAudio.enabled = true;
@@ -75,6 +76,7 @@ public class Hide : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        timeEvent = player.GetComponent<TimeEvents>();
         //get the active/inactive state of the flashlight
         //isFlashLightOn = flashlight.activeInHierarchy;
         //update the discance from the player to the target every interaction
