@@ -100,9 +100,9 @@ public class Hide : MonoBehaviour
                             //Destroy(player.GetComponent<TimeEvents>());
                             player.GetComponent<TimeEvents>().whereAreYou.Stop();
                         }
-                    }
-                    
-                }else{
+                    }    
+                }
+                else{
                     //turn off the flashlight
                     flashlightHidden.SetActive(false);
                     FlashlightSound.Play();
