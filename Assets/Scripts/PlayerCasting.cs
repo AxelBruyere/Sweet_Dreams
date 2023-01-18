@@ -11,7 +11,11 @@ public class PlayerCasting : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {   
+        RaycastHit Hitfloor;
+        if(Physics.Raycast (transform.position, Vector3.down, out Hitfloor)){
+            Debug.Log(Hitfloor.distance);
+        }
         //Structure used to get information back from a raycast.
         RaycastHit Hit;
         //returns true if the ray intersects with a collider
