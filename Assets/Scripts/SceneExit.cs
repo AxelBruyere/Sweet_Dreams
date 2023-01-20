@@ -16,6 +16,7 @@ public class SceneExit : MonoBehaviour
     //function called when button action is called
     public void ButonMoveScene(string sceneToLoad){
         if(Player != null){
+            Player.GetComponent<PlayerMovement>().gravity = 0.0f;
             Destroy(Player.GetComponent<TimeEvents>());
         }
         //Change the name of the last exit name for the actual piece
